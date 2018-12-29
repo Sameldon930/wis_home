@@ -1,0 +1,414 @@
+{
+  "name": "首页",
+  "action": "portal/Index/index",
+  "description": "首页模板文件",
+  "order": 5.0,
+  "more": {
+    "vars": {
+      "top_slide": {
+        "title": "顶部幻灯片",
+        "value": "",
+        "type": "text",
+        "dataSource": {
+          "api": "admin/Slide/index",
+          "multi": false
+        },
+        "placeholder": "请选择顶部幻灯片",
+        "tip": "顶部幻灯片",
+        "rule": {
+          "require": true
+        }
+      }
+    },
+    "widgets": {
+      "about": {
+        "title": "关于我们",
+        "display": "1",
+        "vars": {
+          "sub_title": {
+            "title": "描述",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title1": {
+            "title": "段落1",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title2": {
+            "title": "段落2",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title3": {
+            "title": "段落3",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title4": {
+            "title": "段落4",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title5": {
+            "title": "段落5",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title6": {
+            "title": "段落6",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          }
+
+        }
+      },
+
+      "methods": {
+        "title": "解决方案",
+        "display": "1",
+        "vars": {
+          "sub_title": {
+            "title": "描述",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "features": {
+            "title": "图片切换",
+            "value": [
+              {
+                "title": "",
+                "image":"",
+                "content": ""
+              },
+              {
+                "title": "",
+                "image":"",
+                "content": ""
+              },
+              {
+                "title": "",
+                "image":"",
+                "content": ""
+              },
+              {
+                "title": "",
+                "image":"",
+                "content": ""
+              },
+              {
+                "title": "",
+                "image":"",
+                "content": ""
+              },
+              {
+                "title": "",
+                "image":"",
+                "content": ""
+              },
+              {
+                "title": "",
+                "image":"",
+                "content": ""
+              },
+              {
+                "title": "",
+                "image":"",
+                "content": ""
+              }
+
+
+            ],
+            "type": "array",
+            "item": {
+              "title": {
+                "title": "标题1",
+                "value": "",
+                "type": "text",
+                "rule": {
+                  "require": true
+                }
+              },
+              "image": {
+                "title": "图片",
+                "value": "",
+                "type": "image"
+              },
+              "content": {
+                "title": "描述",
+                "value": "",
+                "type": "textarea"
+              }
+            },
+            "tip": ""
+
+          }
+        }
+      },
+
+      "gallary": {
+        "title": "经典案例",
+        "display": "1",
+        "vars": {
+
+          "sub_title": {
+            "title": "段落1",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title1": {
+            "title": "段落2",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title2": {
+            "title": "段落3",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title3": {
+            "title": "段落4",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title4": {
+            "title": "段落5",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title5": {
+            "title": "段落6",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title6": {
+            "title": "段落7",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title7": {
+            "title": "段落8",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          }
+
+        }
+      },
+
+      "cooporations": {
+        "title": "合作伙伴",
+        "display": "1",
+        "vars": {
+          "sub_title": {
+            "title": "描述",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "features": {
+            "title": "图片切换",
+            "value": [
+              {
+                "title": "",
+                "icon":"",
+                "image":"",
+                "content": ""
+              },
+              {
+                "title": "",
+                "icon":"",
+                "image":"",
+                "content": ""
+              },
+              {
+                "title": "",
+                "icon":"",
+                "image":"",
+                "content": ""
+              },
+              {
+                "title": "",
+                "icon":"",
+                "image":"",
+                "content": ""
+              }
+
+
+            ],
+            "type": "array",
+            "item": {
+              "title": {
+                "title": "标题1",
+                "value": "",
+                "type": "text",
+                "rule": {
+                  "require": true
+                }
+              },
+              "icon": {
+                "title": "标题2",
+                "value": "",
+                "type": "text"
+              },
+              "image": {
+                "title": "图片",
+                "value": "",
+                "type": "image"
+              },
+              "content": {
+                "title": "描述",
+                "value": "",
+                "type": "textarea"
+              }
+            },
+            "tip": ""
+
+          }
+        }
+      },
+
+      "contact":{
+        "title": "联系我们",
+        "display": "1",
+        "vars": {
+          "sub_title0": {
+            "title": "描述",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title": {
+            "title": "地址",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title1": {
+            "title": "电话",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
+          "sub_title2": {
+            "title": "邮箱",
+            "value": "",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          }
+
+
+        }
+      }
+
+
+    }
+  }
+}
+
+
+
+
+
+
+
+

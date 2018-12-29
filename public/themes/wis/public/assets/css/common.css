@@ -1,0 +1,316 @@
+* {
+    font-family: "微软雅黑";
+}
+
+/*公共样式*/
+.align-center {
+    text-align: center;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.bg-fff {
+    background: #ffffff;
+}
+
+.bg-f2 {
+    background: #F2F2F2;
+}
+
+.overflow-heidden {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.overflow-heidden-row-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 3;
+    box-orient: vertical;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/*常用 内外边距*/
+
+.ma-0 {
+    margin: 0;
+}
+
+.ma-0-auto {
+    margin: 0 auto;
+}
+
+.ma-t-1 {
+    margin-top: 1%;
+}
+
+.ma-t-2 {
+    margin-top: 2%;
+}
+
+.ma-t-3 {
+    margin-top: 3%;
+}
+
+.ma-t--2 {
+    margin-top: -2%;
+}
+
+.ma-t--5 {
+    margin-top: -5%;
+}
+
+.ma-t-15 {
+    margin-top: 15%;
+}
+
+.ma-t-5 {
+    margin-top: 5% !important;
+}
+
+.ma-t-10 {
+    margin-top: 10%;
+}
+
+.ma-t-20 {
+    margin-top: 20% !important;
+}
+
+.ma-r-0 {
+    margin-right: 0;
+}
+
+.ma-r-2 {
+    margin-right: 2%;
+}
+
+.ma-r-1 {
+    margin-right: 1%;
+}
+
+.ma-r--2 {
+    margin-right: -2%;
+}
+
+.ma-b-5 {
+    margin-bottom: 5%;
+}
+
+.ma-b-2 {
+    margin-bottom: 2%;
+}
+
+.ma-b-3 {
+    margin-bottom: 3%;
+}
+
+.ma-b-t-10 {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.ma-b-6 {
+    margin-bottom: 6%;
+}
+
+.ma-b-4 {
+    margin-bottom: 4%;
+}
+
+.ma-l-0 {
+    margin-left: 0;
+}
+
+.ma-l-2 {
+    margin-left: 2%;
+}
+
+.ma-l-5 {
+    margin-left: 5%;
+}
+
+.pa-0 {
+    padding: 0;
+}
+
+.pa-2 {
+    padding: 2%;
+}
+
+.pa-t-5 {
+    padding-top: 5%;
+}
+.pa-t-2 {
+    padding-top: 2%;
+}
+
+
+.pa-l-r-8 {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.pa-l-3 {
+    padding-left: 3%;
+}
+
+.pa-l-6 {
+    padding-left: 6%;
+}
+
+
+.pa-l-0 {
+    padding-left: 0;
+}
+
+.pa-r-0 {
+    padding-right: 0;
+}
+
+.pa-b-2{
+    padding-bottom: 2%;
+}
+.pa-b-5 {
+    padding-bottom: 5%;
+}
+
+.pa-l-r-1 {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.pa-l-r-5 {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.pa-l-7 {
+    padding-left: 7%;
+}
+
+.pa-t-b-3 {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.pa-t-b-5 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.pa-t-b-2 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.pa-l-r-2 {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.pa-tb-5-lr-2 {
+    padding: 5% 2%;
+}
+.pa-t-7 {
+    padding-top: 7%;
+}
+
+/*常用 内外边距结束*/
+
+/*常用 字体大小*/
+.font-size12 {
+    font-size: 12px;
+}
+
+.font-size13 {
+    font-size: 13px;
+}
+
+.font-size14 {
+    font-size: 14px;
+}
+
+.font-size15 {
+    font-size: 15px;
+}
+
+.font-size16 {
+    font-size: 16px;
+}
+
+.font-size18 {
+    font-size: 18px;
+}
+
+.font-size20 {
+    font-size: 20px;
+}
+
+.font-size30 {
+    font-size: 30px;
+}
+
+.font-weight-bold{
+    font-weight: bold;
+}
+
+
+/*常用 字体大小结束*/
+
+.text-indent-2em{
+    text-indent:2em;;
+}
+.aritcle-line-height-40{
+    line-height: 40px;
+}
+.display-none{
+    display: none;
+}
+
+.display-block{
+    display: block;
+}
+
+.xs-display-block {
+    display: none;
+}
+
+@media screen and (max-width: 769px) {
+    .xs-img-100 img{
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+@media screen and  (max-width: 416px) {
+    .xs-display-none {
+        display: none;
+    }
+
+    .xs-display-block {
+        display: block;
+    }
+
+    .xs-h-126 {
+        height: 126px;
+    }
+    .xs-ma-t-6{
+        margin-top: 6%;
+    }
+    .xs-pa-s{
+        padding: 0 5% 0 4%;;
+    }
+    .xs-align-left{
+        text-align: left !important;
+    }
+    .xs-align-right{
+        text-align: right !important;
+    }
+    .xs-pa-l-0{
+        padding-left: 0;
+    }
+}

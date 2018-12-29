@@ -1,0 +1,151 @@
+
+a{
+    text-decoration: none !important;
+}
+.footer-30{
+    width: 28%;
+    /*display: inline-block;*/
+    float: left;
+    margin-right: 17%;
+}
+.footer-20{
+    width: 20%;
+    /*display: inline-block;*/
+    float: left;
+    margin-right: 17%;
+}
+.footer-18{
+    width: 18%;
+    /*display: inline-block;*/
+    float: left;
+}
+
+.footer-title-font{
+    text-align: left;
+    font-size: 18px;
+    color: white;
+    margin-bottom:20px;
+}
+.footer-30-a{
+    font-size:12px;
+    color: #999999;
+}
+
+.footer-30-a:hover{
+    color: #0e90d2;
+}
+
+.footer-text-content{
+    text-align: left;
+    margin: 8px 0;
+}
+
+.footer-logo{
+    width: 90px;
+}
+
+
+.row-pos{
+    margin-top: 25px ;
+    margin-left:100px;
+}
+
+.overflow-heidden{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.font-10{
+    font-size: 18px;
+    color: white;
+}
+.ma-l-45{
+    margin-left: 45%;
+}
+
+.font-10:hover{
+    color: white !important;
+}
+.logo-title{
+    /*text-align: center ;*/
+    letter-spacing:0.2em;
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+}
+
+.footer-big-bg{
+    background: url("/skin/wis/images/footer-bg.jpg") -1px -161px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 780px){
+
+    .xs-ma-t-20{
+        margin-top: 20px;
+    }
+
+    .container{
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 675px) {
+    .xs-text-a-c{
+        text-align: center;
+    }
+
+}
+.contact-us{
+    margin: 15px 0;
+    text-align: left;
+    /*margin-bottom: 30px;*/
+}
+.contact-us>h5{
+    display: inline;
+}
+
+#logo {
+    background: url(/skin/wis/images/logo.png) 0 0px #222222;
+    background-size: 65px 65px;
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    left: 52%;
+    margin-left: -32px;
+    z-index: 100;
+    display: block;
+}
+
+@media screen and (max-width: 480px) {
+
+    .home-pattern{
+        height: 400px;
+        background-size:cover;
+    }
+    .div-align-center{
+        vertical-align: baseline;
+    }
+    .text-slide-vertical{
+        font-size: 20px;
+    }
+    #home{
+        height: auto;
+    }
+
+    .row-pos{
+        margin-left: 15px;
+    }
+    .footer-logo{
+        width: 70px;
+    }
+    .footer-big-bg {
+        background: url(/skin/wis/images/footer-bg.jpg) -222px -1px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .footer-20{
+        width: 100%;
+    }
+}

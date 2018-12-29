@@ -1,0 +1,10 @@
+{
+    "name": "微信小程序",
+    "action": "portal/Wechat/index",
+    "description": "文章页模板文件",
+    "order": 10.0,
+    "more": {
+        "vars": {
+        }
+    }
+}

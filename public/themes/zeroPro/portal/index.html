@@ -1,0 +1,249 @@
+<!doctype html>
+
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>智世零售小程序</title>
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/flexslider.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/main.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/responsive.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/font-icon.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/animate.min.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/font-awesome.min.css">
+</head>
+
+<body>
+<section class="banner" role="banner">
+    <header id="header">
+        <div class="header-content clearfix"> <a class="logo" href="index.html">智世零售小程序</a>
+            <nav class="navigation" role="navigation">
+                <ul class="primary-nav">
+                    <li><a href="#banner">首页</a></li>
+                    <li><a href="#services">服务中心</a></li>
+                    <li><a href="#content-3-10">关于我们</a></li>
+                    <li><a href="#gallery">客户案例</a></li>
+                    <li><a href="#teams">合作加盟</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+    </header>
+    <div class="banner" id="banner">
+        <div class="slider-banner">
+            <widget name="slides">
+                <php>
+                    $features_count = count($widget['vars']['features']);
+                    $rows = ceil($features_count/$features_count);
+                </php>
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*$features_count;
+                        $features = array_slice($widget['vars']['features'],$first_row,2);
+                    </php>
+                    <foreach name="features" item="vo">
+                        <div data-lazy-background="/upload/{$vo.image|default=''}">
+                            <h3 data-pos="['68%', '-40%', '58%', '42%']" data-duration="700" data-effect="move">
+                            </h3> <br>
+                            <p data-pos="['75%', '110%', '75%', '32%']" data-duration="700" data-effect="move">
+                            </p>
+                        </div>
+                    </foreach>
+                </for>
+            </widget>
+
+
+
+        </div>
+    </div>
+</section>
+<section id="intro" >
+</section>
+<section id="services" class="services service-section">
+    <div class="container">
+        <div class="section-header">
+            <widget name="service">
+
+            <h2 class="wow fadeInDown animated">{$widget.title}</h2>
+            <p class="wow fadeInDown animated">{$widget.vars.sub_title}</p>
+            </widget>
+
+        </div>
+        <div class="row">
+            <widget name="service">
+                <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-strategy"></span>
+                    <div class="services-content">
+                        <h5>{$widget.vars.sub_title1}</h5>
+                        <p>{$widget.vars.sub_title2}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-briefcase"></span>
+                    <div class="services-content">
+                        <h5>{$widget.vars.sub_title3}</h5>
+                        <p>{$widget.vars.sub_title4}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-tools"></span>
+                    <div class="services-content">
+                        <h5>{$widget.vars.sub_title5}</h5>
+                        <p>{$widget.vars.sub_title6}</p>
+                    </div>
+                </div>
+            </widget>
+        </div>
+    </div>
+</section>
+<section id="content-3-10" class="content-block data-section nopad content-3-10">
+    <div class="image-container col-sm-6 col-xs-12 pull-left">
+        <div class="background-image-holder">
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-6 col-xs-12 content">
+                <widget name="about">
+
+                <div class="editContent">
+                    <h3>{$widget.title}</h3>
+                </div>
+                    <div class="editContent">
+                        <p>{$widget.vars.sub_title1}</p>
+                        <p>{$widget.vars.sub_title2}</p>
+                    </div>
+                </widget>
+                <a href="#contact" class="btn btn-outline btn-outline outline-dark">联系我们</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="gallery" class="gallery section">
+    <div class="container-fluid">
+        <div class="section-header">
+            <widget name="galarays">
+
+            <h2 class="wow fadeInDown animated">{$widget.title}</h2>
+            </widget>
+            <p class="wow fadeInDown animated">{$widget.vars.sub_title}<br>
+                {$widget.vars.sub_title1}</p>
+        </div>
+        <div class="row no-gutter">
+            <widget name="galarays">
+                    <php>
+                        $features_count = count($widget['vars']['features']);
+                        $rows = ceil($features_count/$features_count);
+                    </php>
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                        <php>
+                            $first_row = ($row-1)*$features_count;
+                            $features = array_slice($widget['vars']['features'],$first_row,8);
+                        </php>
+                    <foreach name="features" item="vo">
+                        <div class="col-lg-3 col-md-6 col-sm-6 work">
+                            <a href="/upload/{$vo.image|default=''}" class="work-box">
+                                <img src="/upload/{$vo.image|default=''}" alt="">
+                            <div class="overlay">
+                                <div class="overlay-caption">
+                                    <p><span class="icon icon-magnifying-glass"></span></p>
+                                </div>
+                            </div>
+                        </a> </div>
+                    </foreach>
+                </for>
+            </widget>
+        </div>
+    </div>
+</section>
+<section id="teams" class="section teams">
+    <div class="container">
+        <div class="section-header">
+            <widget name="cooporations">
+
+            <h2 class="wow fadeInDown animated">{$widget.title}</h2>
+            </widget>
+            <p class="wow fadeInDown animated">{$widget.vars.sub_title}
+                <br>{$widget.vars.sub_title1}</p>
+        </div>
+        <div class="row">
+            <widget name="cooporations">
+                <php>
+                    $features_count = count($widget['vars']['features']);
+                    $rows = ceil($features_count/$features_count);
+                </php>
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*$features_count;
+                        $features = array_slice($widget['vars']['features'],$first_row,4);
+                    </php>
+
+                    <foreach name="features" item="vo">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="person"><img src="/upload/{$vo.image|default=''}" alt="" class="img-responsive">
+                                <div class="person-content">
+                                    <h4>{$vo.title}</h4>
+                                    <p>{$vo.content}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </foreach>
+                </for>
+            </widget>
+        </div>
+    </div>
+</section>
+<section id="contact" class="section">
+    <div class="container">
+        <div class="section-header">
+            <widget name="contact">
+
+            <h2 class="wow fadeInDown animated">{$widget.title}</h2>
+            </widget>
+            <p class="wow fadeInDown animated">{$widget.vars.sub_title0}
+                <br>{$widget.vars.sub_title00}</p>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 conForm">
+                <widget name="contact">
+                    <span><strong>地址:</strong>{$widget.vars.sub_title}</span>    <br>
+                    <span><strong>电话:</strong>{$widget.vars.sub_title1}</span> <br>
+                    <span><strong>邮箱:</strong>{$widget.vars.sub_title2}</span>
+                </widget>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<footer>
+    <div class="row text-center">
+        <p>Copyright &copy; 智世（厦门）网络科技有限公司 <a href="http://www.world-is-smart.com/" target="_blank" title="智世科技"></a></p>
+    </div>
+</footer>
+
+<script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+<script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+<script src="__TMPL__/public/assets/js/jquery.flexslider-min.js"></script>
+<script src="__TMPL__/public/assets/js/jquery.fancybox.pack.js"></script>
+<script src="__TMPL__/public/assets/js/modernizr.js"></script>
+<script src="__TMPL__/public/assets/js/main.js"></script>
+<script type="text/javascript" src="__TMPL__/public/assets/js/jquery.contact.js"></script>
+<script type="text/javascript" src="__TMPL__/public/assets/js/jquery.devrama.slider.min-0.9.4.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.slider-banner').DrSlider({
+            'transition': 'fade',
+            showNavigation: false,
+            progressColor: "#03A9F4"
+        });
+    });
+</script>
+</body>
+</html>

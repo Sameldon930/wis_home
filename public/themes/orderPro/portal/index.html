@@ -1,0 +1,381 @@
+<!doctype html>
+
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>智世预约小程序</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/switcher/switcher.css" />
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/main.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/colors/blue.css">
+    <script src="__TMPL__/public/assets/js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="overflow: visible;">
+
+
+<div id="preloader">
+    <div id="status"></div>
+</div>
+
+
+
+<header>
+    <nav class="navbar default nav-mob">
+        <div class="container mob-logo">
+            <div class="navbar-header col-sm-2 tablet-logo">
+                <button type="button" class="navbar-toggle mob-menu" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#slides" class="brand-logo">
+                    <div style="font-weight: bold;font-size: 22px;color: #fff;margin-top:7%;">
+                        智世预约小程序
+                    </div>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="active">
+                        <a href="#slides">首页</a>
+                    </li>
+                    <li>
+                        <a href="#karbar-how-it-works-section">关于我们</a>
+                    </li>
+                    <li>
+                        <a href="#karbar-service-section">服务中心</a>
+                    </li>
+                    <li>
+                        <a href="#karbar-why-choose-section">客户案例</a>
+                    </li>
+                    <li>
+                        <a href="#karbar-team-section">合作加盟</a>
+                    </li>
+                    <li>
+                        <a  href="#karbar-footer-section">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section id="slides" class="pb">
+    <div class="slides-container">
+        <widget name="slides">
+            <php>
+                $features_count = count($widget['vars']['features']);
+                $rows = ceil($features_count/$features_count);
+            </php>
+            <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                <php>
+                    $first_row = ($row-1)*$features_count;
+                    $features = array_slice($widget['vars']['features'],$first_row,2);
+                </php>
+                <foreach  name="features" item="vo">
+                    <div class="slide">
+                        <div class="img"><img src="/upload/{$vo.image|default=''}" alt="slide" class="img-responsive"></div>
+                        <div class="overlay"></div>
+                        <div class="slide-caption">
+                        </div>
+                    </div>
+                </foreach>
+            </for>
+        </widget>
+
+
+    </div>
+    <div class="slides-navigation">
+        <a class="prev sqaureIconSec" href="#"> <i class="fa fa-chevron-left"></i></a>
+        <a class="next sqaureIconSec" href="#"> <i class="fa fa-chevron-right"></i></a>
+    </div>
+    <div class="holder">
+
+	  <span class="scroll-btn">
+		<a href="#karbar-how-it-works-section">
+			<span class="mouse">
+				<span>
+				</span>
+			</span>
+		</a>
+	</span>
+        <i class="fa fa-chevron-down moreArrow moving"></i>
+    </div>
+
+</section>
+
+<section id="karbar-how-it-works-section" class="how-it-works section-bg-color">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 section-title-padding">
+                <div class="sec-title-container text-center">
+                    <div class="title-line"></div>
+                    <widget name="features">
+
+                    <h2 class="uppercase font-weight-7 less-mar-1">{$widget.title}</h2>
+                    <div class="clearfix"></div>
+                    <p class="by-sub-title">{$widget.vars.sub_title}</p>
+                    </widget>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-11 center-block">
+                <widget name="features">
+                    <php>
+                        $features_count = count($widget['vars']['features']);
+                        $rows = ceil($features_count/4);
+                    </php>
+                    <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                        <php>
+                            $first_row = ($row-1)*4;
+                            $features = array_slice($widget['vars']['features'],$first_row,4);
+                        </php>
+                        <foreach name="features" item="vo">
+                            <div class="row">
+                                <div class="col-md-6 col-md-push-6 text-center">
+                                    <img src="/upload/{$vo.image|default=''}" >
+                                </div>
+                                <div class="col-md-6 col-md-pull-6 reveal-left-fade">
+                                    <div class="step-number"><span></span></div>
+                                    <h4>{$vo.title}</h4>
+                                    <p>{$vo.content}</p>
+                                </div>
+                            </div>
+                        </foreach>
+                    </for>
+                </widget>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="karbar-service-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 section-title-padding">
+                <div class="sec-title-container text-center">
+                    <div class="title-line"></div>
+                    <widget name="service">
+
+                    <h2 class="uppercase font-weight-7 less-mar-1">{$widget.title}</h2>
+                    <div class="clearfix"></div>
+                    <p class="by-sub-title">{$widget.vars.sub_title}</p>
+                    </widget>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <widget name="service">
+            <div class="item">
+                <div class="col-md-6">
+                    <div class="service-left-side active reveal-right-delay">
+                        <div class="circle"> <i class="fa fa-desktop"></i> </div>
+                        <div class="text-box">
+                            <h5 class="title">{$widget.vars.sub_title1}</h5>
+                            <p>{$widget.vars.sub_title2}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-right-side reveal-right-delay">
+                        <div class="circle"> <i class="fa fa-tablet"></i> </div>
+                        <div class="text-box">
+                            <h5 class="title">{$widget.vars.sub_title3}</h5>
+                            <p>{$widget.vars.sub_title4}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-divider-margin-3"></div>
+                <div class="col-md-6">
+                    <div class="service-left-side reveal-right-delay">
+                        <div class="circle"> <i class="fa fa-picture-o"></i> </div>
+                        <div class="text-box">
+                            <h5 class="title">{$widget.vars.sub_title5}</h5>
+                            <p>{$widget.vars.sub_title6}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-right-side reveal-right-delay">
+                        <div class="circle"> <i class="fa fa-wordpress"></i> </div>
+                        <div class="text-box">
+                            <h5 class="title">{$widget.vars.sub_title7}</h5>
+                            <p>{$widget.vars.sub_title8}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </widget>
+        </div>
+    </div>
+</section>
+
+
+<section id="karbar-why-choose-section">
+    <div class="awesome-team-members">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 section-title-padding">
+                    <div class="sec-title-container text-center">
+                        <div class="title-line"></div>
+                        <widget name="galary">
+
+                        <h2 class="uppercase font-weight-7 less-mar-1">{$widget.title}</h2>
+                        <div class="clearfix"></div>
+                        <p class="by-sub-title">{$widget.vars.sub_title}</p>
+                        </widget>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <widget name="galary">
+                    <div class="col-md-4 col-sm-6 col-xs-12 padding">
+                        <div class="item-holder margin-bottom">
+                            <img src="/upload/{$widget.vars.image1|default=''}" alt="" class="img-responsive">
+                            <div class="clearfix"></div>
+                            <div class="text-box text-center">
+                                <h4 class="text-white font-weight-5">{$widget.vars.sub_title1}</h4>
+                                <p class="text-sm">{$widget.vars.sub_title2}</p>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 padding">
+                        <div class="item-holder margin-bottom">
+                            <div class="text-box text-center more-height white">
+                                <h4 class="font-weight-5">{$widget.vars.sub_title3}</h4>
+                                <p>{$widget.vars.sub_title4}</p>
+                                <br>
+
+                            </div>
+                            <img src="/upload/{$widget.vars.image2|default=''}" alt="" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 padding">
+                        <div class="item-holder margin-bottom">
+                            <img src="/upload/{$widget.vars.image3|default=''}" alt="" class="img-responsive">
+                            <div class="clearfix"></div>
+                            <div class="text-box text-center">
+                                <h4 class="text-white font-weight-5">{$widget.vars.sub_title5}</h4>
+                                <p class="text-sm">{$widget.vars.sub_title6}</p>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+                </widget>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="karbar-team-section" class="tc-light-style">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 section-title-padding">
+                <div class="sec-title-container text-center">
+                    <div class="title-line"></div>
+                    <widget name="cooporations">
+
+                    <h2 class="uppercase font-weight-7 less-mar-1">{$widget.title}</h2>
+                    <div class="clearfix"></div>
+                    <p class="by-sub-title">{$widget.vars.sub_title}</p>
+                    </widget>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+        <div class="row sec-padding sponsors">
+            <ul class="clients-list grid-cols-6 hover-6">
+                <widget name="cooporations">
+                    <php>
+                        $features_count = count($widget['vars']['features']);
+                        $rows = ceil($features_count/6);
+                    </php>
+                    <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                        <php>
+                            $first_row = ($row-1)*6;
+                            $features = array_slice($widget['vars']['features'],$first_row,6);
+                        </php>
+                        <foreach name="features" item="vo">
+                            <li>
+                                <a href="#"><img src="/upload/{$vo.image|default=''}" alt=""></a>
+
+                            </li>
+                        </foreach>
+                    </for>
+
+                </widget>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="karbar-footer-section">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <widget name="contact">
+                <div class="contact-info">
+                    <ul class="clearfix">
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>
+                            <p>{$widget.vars.sub_title}
+                                <br>{$widget.vars.sub_title1}</p>
+                        </li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                            <p>{$widget.vars.sub_title2}
+                                <br>{$widget.vars.sub_title3}</p>
+                        </li>
+                        <li><i class="fa fa-flag" aria-hidden="true"></i>
+                            <p>{$widget.vars.sub_title4}
+                                <br>{$widget.vars.sub_title5}</p>
+                        </li>
+                    </ul>
+                </div>
+            </widget>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="row">
+            <div class="col-sm-12">
+
+
+
+                <div class="copyright">
+                    <p class="copyright">Copyright &copy; 智世（厦门）网络科技有限公司 <a href="http://www.world-is-smart.com/" target="_blank" title="智世科技"></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="__TMPL__/public/assets/js/jquery-1.8.3.min.js"></script>
+<script src="__TMPL__/public/assets/js/plugins.js"></script>
+<script src="__TMPL__/public/assets/js/jquery.superslides.min.js"></script>
+<script src="__TMPL__/public/assets/js/jquery-contact.js"></script>
+<script src="__TMPL__/public/assets/js/retina.min.js"></script>
+<script src="__TMPL__/public/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="__TMPL__/public/assets/js/scrollreveal.min.js"></script>
+<script src="__TMPL__/public/assets/js/main.js"></script>
+
+<script src="__TMPL__/public/assets/switcher/switcher.js"></script>
+
+</body>
+</html>
+

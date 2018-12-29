@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>智世婚庆小程序</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/normalize.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/main.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/solido.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/isotope.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/vegas/jquery.vegas.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/popup/magnific-popup.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/js/superslides-0.6.2/dist/stylesheets/superslides.css">
+
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/color/dark.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/color/black.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/color/green.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/color/red.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/color/yellow.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/color/purple.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/color/turquoise.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/color/orange.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/color/blue.css">
+
+    <script src="__TMPL__/public/assets/js/vendor/modernizr-2.6.2.min.js"></script>
+
+
+</head>
+<body>
+<div id="mask">
+    <div class="loader">
+        <img src="__TMPL__/public/assets/images/loading.gif" alt='loading'>
+    </div>
+</div>
+
+
+<div id="anchor1"></div>
+
+<div id="slides-1">
+    <div class="overlay"></div>
+    <div class="slides-container">
+        <widget name="slides">
+            <php>
+                $features_count = count($widget['vars']['features']);
+                $rows = ceil($features_count/$features_count);
+            </php>
+            <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                <php>
+                    $first_row = ($row-1)*$features_count;
+                    $features = array_slice($widget['vars']['features'],$first_row,4);
+                </php>
+                <foreach name="features" item="vo">
+
+                    <img src="/upload/{$vo.image|default=''}" alt="">
+
+                </foreach>
+            </for>
+        </widget>
+    </div>
+    <nav class="slides-navigation">
+    </nav>
+</div>
+
+
+<div class="main-title">
+    <div class="title-container">
+        <widget name="center">
+            <div class="welcome">{$widget.vars.sub_title}</div>
+            <ul>
+                <li class="t-current">{$widget.vars.sub_title1}</li>
+                <li>{$widget.vars.sub_title2}</li>
+                <li>{$widget.vars.sub_title3}</li>
+            </ul>
+            <div class="spacer"></div>
+            <div class="second-title">{$widget.vars.sub_title4}</div>
+        </widget>
+        <a href="#anchor2"><div class="buy-logo">了解更多<span></span></div></a>
+    </div>
+</div>
+<div id="logx"></div>
+<header class="header">
+    <div class="logo"><span><span></span></span>婚庆小程序</div>
+    <nav id="nav2" role="navigation">
+        <a class="jump-menu" title="Show navigation">Show navigation</a>
+        <ul>
+            <li class="current"><a href="#anchor1">首页</a></li>
+            <li><a href="#anchor2">关于我们</a></li>
+            <li><a href="#anchor3">我们的服务</a></li>
+            <li><a href="#anchor4">客户案例</a></li>
+
+            <li><a href="#anchor5">合作加盟</a></li>
+
+            <li><a href="#anchor6">联系我们</a></li>
+        </ul>
+    </nav>
+    <nav class="menu">
+        <ul id="nav">
+            <li class="current"><a href="#anchor1">首页</a></li>
+            <li><a href="#anchor2">关于我们</a></li>
+            <li><a href="#anchor3">我们的服务</a></li>
+            <li><a href="#anchor4">客户案例</a></li>
+            <li><a href="#anchor5">合作加盟</a></li>
+
+            <li><a href="#anchor6">联系我们</a></li>
+        </ul>
+    </nav>
+</header>
+<article id="anchor2" class="content menu-top dark">
+
+</article>
+<article class="content light">
+    <div class="full">
+        <section class="half car-show-1">
+            <header class="title-one">Our Offices</header>
+            <widget name="profession">
+
+                <div class="title-two">{$widget.title}</div>
+            </widget>
+            <div class="show hideme dontHide">
+                <div class="caroussel">
+                    <widget name="profession">
+                    <div class="caroussel-list">
+                        <div class="car-img"><img src="/upload/{$widget.vars.image|default=''}" alt='img'></div>
+                        <div class="car-img"><img src="/upload/{$widget.vars.image2|default=''}" alt='img'></div>
+                        <div class="car-img"><img src="/upload/{$widget.vars.image3|default=''}" alt='img'></div>
+                    </div>
+                    </widget>
+                </div>
+                <div class="car-prev"></div>
+                <div class="car-next"></div>
+            </div>
+            <div class="controller">
+                <ul>
+                </ul>
+            </div>
+        </section>
+        <section class="half">
+            <header class="title-one">about us</header>
+            <widget name="about">
+
+            <div class="title-two">{$widget.title}</div>
+            <div class="half-content hideme dontHide">
+                {$widget.vars.sub_title}<br>
+                {$widget.vars.sub_title1}<br>
+                {$widget.vars.sub_title2}<br>
+                {$widget.vars.sub_title3}<br>
+                {$widget.vars.sub_title4}<br>
+                {$widget.vars.sub_title5}
+
+            </div>
+            </widget>
+        </section>
+    </div>
+    <div class="clear"></div>
+</article>
+<div class="clear"></div>
+
+<article id=anchor3 class="content dark">
+    <widget name="services">
+        <header class="title one">{$widget.title}</header>
+        <div class="spacer"></div>
+        <div class="title two">{$widget.vars.sub_title}</div>
+    </widget>
+
+    <section class="team-box">
+        <div class="s-container team-grid">
+            <widget name="services">
+                <php>
+
+                    $features_count = count($widget['vars']['features']);
+
+                    $rows = ceil($features_count/1);
+                </php>
+            <div class="t-list">
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*1;
+                        $features = array_slice($widget['vars']['features'],$first_row,1);
+                    </php>
+                    <foreach name="features" item="vo">
+                        <div class="t-element hideme dontHide">
+                            <div class="t-photo">
+                                <div class="image-hover-overlay"></div>
+                                <a class="f-category" href="#"></a>
+                                <a href="#"><div class="portfolio-meta">
+                                    <div>{$vo.icon}</div>
+                                </div></a>
+                                <img src="/upload/{$vo.image|default=''}" alt='img'>
+                            </div>
+                            <div class="t-data">
+                                <div class="t-name">{$vo.title}</div>
+                                <div class="t-info">{$vo.content}</div>
+                                <div class="t-spacer"></div>
+                                <div class="t-social">
+                                    <div class="in-social">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreach>
+                </for>
+            </div>
+            </widget>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+</article>
+
+
+
+<div class="clear"></div>
+
+<article id=anchor4 class="content dark">
+    <widget name="gallerys">
+    <header class="title one">{$widget.title}</header>
+    <div class="spacer"></div>
+    <div class="title two">{$widget.vars.sub_title}</div>
+    </widget>
+
+    <div id="portfolio" class="container">
+        <div class="section portfoliocontent">
+            <section id="options" class="clear">
+                <div id="filters" class="option-set clearfix foliomenu hideme dontHide" data-option-key="filter">
+
+                </div>
+            </section>
+            <div class="clear"></div>
+            <div id="project-show"></div>
+            <section class="project-window">
+                <div class="project-content"></div>
+            </section>
+            <section id="i-portfolio" class="clear">
+                <widget name="gallerys">
+                    <php>
+                        $features_count = count($widget['vars']['features']);
+
+                        $rows = ceil($features_count/5);
+                    </php>
+                <div class="inici"></div>
+                    <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                        <php>
+                            $first_row = ($row-1)*5;
+                            $features = array_slice($widget['vars']['features'],$first_row,5);
+                        </php>
+                        <foreach name="features" item="vo">
+                            <div class="ch-grid element graphic music" >
+                                <img class="ch-item" src="/upload/{$vo.image|default=''}" alt='img'>
+                                <div>
+                                    <span>
+                                        <span class="p-category"></span>
+                                        <span class="cat2">{$vo.title}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </foreach>
+                    </for>
+                </widget>
+                <div class="final"></div>
+            </section>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+
+</article>
+<article id=anchor5 class="content dark">
+    <widget name="cooporations">
+
+    <header class="title one">{$widget.title}</header>
+    <div class="spacer"></div>
+    <div class="title two">{$widget.vars.sub_title}</div>
+    </widget>
+
+    <div class="s-container services-container">
+        <section class="services">
+            <widget name="cooporations">
+                <php>
+                    $features_count = count($widget['vars']['features']);
+                    $rows = ceil($features_count/5);
+                </php>
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*5;
+                        $features = array_slice($widget['vars']['features'],$first_row,5);
+                    </php>
+                    <foreach name="features" item="vo">
+                    <div class="sl-element hideme dontHide">
+
+                        <div class="sl-ico sl-config"><img src="/upload/{$vo.image|default=''}" width="110px" height="110px"alt=""></div>
+                        <div class="sl-title">{$vo.title}</div>
+                        <div class="tooltip s-roll">
+
+                        </div>
+                        <span class="arrow-down s-roll"></span>
+                    </div>
+                    </foreach>
+                </for>
+            </widget>
+            <div class="clear"></div>
+        </section>
+    </div>
+</article>
+<footer id=anchor6 class="footer light">
+    <div class="footer-container">
+        <widget name="contact">
+
+        <div class="title one no-top">{$widget.title}</div>
+        <div class="spacer"></div>
+        <div class="title two f-bottom">{$widget.vars.sub_title0}</div>
+        </widget>
+
+        <div class=" hideme dontHide" style="text-align: center;">
+            <div class="f-title-one">contact</div>
+            <div class="f-title-two"></div>
+            <widget name="contact">
+                <div class="f-data adress"><img src="__TMPL__/public/assets/images/adress-ico.png" alt='img'> 地址: <span>{$widget.vars.sub_title}</span></div>
+                <div class="f-data phone"><img src="__TMPL__/public/assets/images/phone-ico.png" alt='img'> 电话: <span>{$widget.vars.sub_title1}</span></div>
+                <div class="f-data e-mail"><img src="__TMPL__/public/assets/images/mail-ico.png" alt='img'> 邮箱: <span>{$widget.vars.sub_title2}</span></div>
+            </widget>
+        </div>
+
+
+    </div>
+</footer>
+<a href="#" class="scrollup">^</a>
+<div class="socialFooter">
+    <div class="social-icons">
+
+    </div>
+    <div class="clear"></div>
+    <div class="copy">  智世(厦门)网络科技有限公司 <a href="http://www.world-is-smart.com/" target="_blank" title="智世科技"></a> </div>
+</div>
+<script src="__TMPL__/public/assets/js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="__TMPL__/public/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="__TMPL__/public/assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="__TMPL__/public/assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="__TMPL__/public/assets/js/jquery.smoothwheel.js"></script>
+<script src="__TMPL__/public/assets/js/main.js"></script>
+<script src="__TMPL__/public/assets/js/jquery.inview.js"></script>
+<script type="text/javascript" 	src="__TMPL__/public/assets/js/jquery.sticky.js"></script>
+<script type="text/javascript" src="__TMPL__/public/assets/js/caroussel/jquery.easing.1.3.js"></script>
+<script type="text/javascript" 	src="__TMPL__/public/assets/js/portfolio.js"></script>
+<script src="__TMPL__/public/assets/js/superslides-0.6.2/dist/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript" src="__TMPL__/public/assets/js/jquery.hoverdir.js"></script>
+<script src="__TMPL__/public/assets/js/jquery.nav.js"></script>
+<script src="__TMPL__/public/assets/js/popup/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="__TMPL__/public/assets/js/caroussel/jquery.contentcarousel.js"></script>
+<script src="__TMPL__/public/assets/js/jquery.isotope.min.js"></script>
+<script src="__TMPL__/public/assets/js/jquery.validate.js"></script>
+<script src="__TMPL__/public/assets/js/jquery.form.js"></script>
+<script src="__TMPL__/public/assets/js/test.js"></script>
+</body>
+</html>

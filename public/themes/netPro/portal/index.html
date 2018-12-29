@@ -1,0 +1,291 @@
+<html>
+<head>
+    <title>智世官网小程序</title>
+    <link href="__TMPL__/public/assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="__TMPL__/public/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <script src="__TMPL__/public/assets/js/jquery.min.js"> </script>
+    <script type="text/javascript" src="__TMPL__/public/assets/js/move-top.js"></script>
+    <script type="text/javascript" src="__TMPL__/public/assets/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="home" class="header-top">
+    <div class="container">
+        <div class="header-logo">
+            <a href="#" style="font-size: 50px;color: #ffffff;">智世官网小程序</a>
+        </div>
+        <div class="header-sub-text">
+            <h2></h2>
+            <p></small></p>
+        </div>
+        <div class="header-top-grids">
+
+            <div class="clearfix"> </div>
+        </div>
+        <div class="header-bottom-grids">
+
+
+            <div class="clearfix"> </div>
+        </div>
+        <div class="arrow-grid">
+
+        </div>
+    </div>
+</div>
+<div id="header-nav" class="header-nav">
+    <div class="top-nav">
+        <nav>
+            <div class="logo">
+                <a href="#" style="font-size: 20px;color: black">智世官网小程序</a>
+            </div>
+            <span class="menu"></span>
+            <ul>
+                <li class="active"><a class="scroll" href="#home">首页</a></li>
+                <li><a class="scroll" href="#about">关于我们</a></li>
+                <li><a class="scroll" href="#services">服务中心</a></li>
+                <li><a class="scroll" href="#portfolio">客户案例</a></li>
+                <li><a class="scroll" href="#blog">合作加盟</a></li>
+                <li class="contact"><a class="scroll" href="#contact">联系我们</a></li>
+                <div class="clearfix"> </div>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        $("span.menu").click(function(){
+            $(".top-nav ul").slideToggle("slow" , function(){
+            });
+        });
+    </script>
+    <script src="__TMPL__/public/assets/js/myscript.js"> </script>
+</div>
+<div class="content">
+    <div class="container">
+
+    </div>
+</div>
+<div id="about" class="content-about">
+    <div class="container">
+        <widget name="about">
+
+        <div class="content-about-text">
+            <h2>{$widget.title}</h2>
+            <span> </span>
+        </div>
+            <div class="row">
+                <div class="col-md-6 content-about-grid-left">
+                    <img src="upload/{$widget.vars.image|default=''}">
+                </div>
+                <div class="col-md-6 content-about-grid-right">
+                    <p>{$widget.vars.sub_title}
+                    </p>
+                    <div class="learn">
+                        <a href="#contact">联系我们</a>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </widget>
+    </div>
+
+</div>
+<div id="services" class="content-skills">
+    <div class="container">
+        <widget name="services">
+
+        <div class="content-skills-text">
+            <h2>{$widget.title}</h2>
+            <span> </span>
+        </div>
+            <php>
+                $features_count = count($widget['vars']['features']);
+                $rows = ceil($features_count/1);
+            </php>
+        <div class="row">
+            <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                <php>
+                    $first_row = ($row-1)*1;
+                    $features = array_slice($widget['vars']['features'],$first_row,1);
+                </php>
+                <foreach name="features" item="vo">
+                    <div class="col-md-3 content-top-grid">
+                        <sub> </sub>
+                        <h3>{$vo.title}</h3>
+                        <p>{$vo.image}、
+                            <br>
+                            {$vo.content}<br>
+
+                        </p>
+                    </div>
+                </foreach>
+            </for>
+        </div>
+        </widget>
+
+    </div>
+</div>
+
+
+</div>
+
+</div>
+
+<div class="container">
+    <div id="portfolio" class="portfolio">
+        <div class="port-text">
+            <widget name="galarys">
+            <h2>{$widget.title}</h2>
+            </widget>
+            <span class="folio"> </span>
+        </div>
+        <div  class="section" id="section-3">
+            <ul id="filters" class="clearfix wow bounceIn" data-wow-delay="0.4s">
+
+            </ul>
+            <widget name="galarys">
+                <php>
+                    $features_count = count($widget['vars']['features']);
+                    $rows = ceil($features_count/6);
+                </php>
+
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*6;
+                        $features = array_slice($widget['vars']['features'],$first_row,6);
+                    </php>
+                            <div id="portfoliolist">
+                                <foreach name="features" item="vo">
+
+                                <div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+                                    <div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+                                        <a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+                                            <img src="/upload/{$vo.image|default=''}" class="img-responsive" alt=""/></a>
+                                        <p>{$vo.title}</p><h3>{$vo.content}</h3>
+                                        <div class="tour-caption">
+                                            <span> </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                </foreach>
+
+                            </div>
+                </for>
+            </widget>
+            <div class="clearfix"></div>
+
+        </div>
+    <div class="container">
+        <div id="blog" class="portfolio">
+            <div class="port-text">
+                <widget name="cooporations">
+
+                <h2>{$widget.title}</h2>
+                </widget>
+                <span class="folio"> </span>
+            </div>
+            <div  class="section" id="section-3">
+                <ul id="filters" class="clearfix wow bounceIn" data-wow-delay="0.4s">
+
+                </ul>
+                <widget name="cooporations">
+                    <php>
+                        $features_count = count($widget['vars']['features']);
+                        $rows = ceil($features_count/6);
+                    </php>
+
+                    <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                        <php>
+                            $first_row = ($row-1)*6;
+                            $features = array_slice($widget['vars']['features'],$first_row,6);
+                        </php>
+                        <div id="portfoliolist">
+                            <foreach name="features" item="vo">
+                                <div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+                                    <div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+                                        <a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+                                            <img src="/upload/{$vo.image|default=''}" class="img-responsive" alt=""/></a>
+                                        <p>{$vo.title}</p><h3>{$vo.content}</h3>
+                                        <div class="tour-caption">
+                                            <span> </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </foreach>
+                        </div>
+                    </for>
+                </widget>
+                    <div class="clearfix"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="__TMPL__/public/assets/js/jquery.mixitup.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                var filterList = {
+                    init: function () {
+                        $('#portfoliolist').mixitup({
+                            targetSelector: '.portfolio',
+                            filterSelector: '.filter',
+                            effects: ['fade'],
+                            easing: 'snap',
+                            onMixEnd: filterList.hoverEffect()
+                        });
+                    },
+                    hoverEffect: function () {
+                        $('#portfoliolist .portfolio').hover(
+                            function () {
+                                $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                                $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
+                            },
+                            function () {
+                                $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                                $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+                            }
+                        );
+                    }
+                };
+                filterList.init();
+            });
+        </script>
+    </div>
+    <div id="contact" id="arrow" class="content-Get-in-touch">
+        <div class="container">
+            <div class="Get-in-touch-text">
+                <widget name="contact">
+
+                <h2>{$widget.title}</small></h2>
+                </widget>
+                <span class="portfolio"> </span>
+            </div>
+
+            <div class="content-portfolio" >
+                <widget name="contact">
+                    <span style="font-size: 20px;color: #9F449B">地址:{$widget.vars.sub_title}</span><br>
+                    <span style="font-size: 20px;color: #9F449B">电话:  {$widget.vars.sub_title1}</span><br>
+                    <span style="font-size: 20px;color: #9F449B">邮箱:{$widget.vars.sub_title2}</span>
+                </widget>
+                <p>Copyright &copy; 智世(厦门)网络科技有限公司 <a href="http://www.world-is-smart.com/" target="_blank" title="智世科技"></a> </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</body>
+</html>

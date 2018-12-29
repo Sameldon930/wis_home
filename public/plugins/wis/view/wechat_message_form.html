@@ -1,0 +1,157 @@
+
+	<!--这是表单11
+	<a href="{:url('/plugin/wis/apiIndex/index',array('name'=>'123'))}" class="js-ajax-dialog-btn"
+	   data-msg="确定安装该插件吗？">安装</a>-->
+	<!--右侧边栏 pc-->
+	<div class="right-side">
+		<div class="right-side-show">
+			免费试用或领取小程序代理资料
+		</div>
+		<div class="right-side-info">
+			<div class="container-fluid">
+				<div class="side-title">
+					免费试用或领取小程序代理资料
+				</div>
+				<form action="{:url('/plugin/wis/apiIndex/wechat_message')}" method="post" id="wechat_message1" onsubmit="return postform('wechat_message1');">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-3 pa-0">
+								<div class="col-md-3 sm-ico-po" >
+									<div class="sm-input-ico">
+										<i class="fa fa-user fa-2x "></i>
+									</div>
+								</div>
+								<div class="col-md-8 pa-0">
+									<div class="sm-input-title">
+										姓名
+									</div>
+								</div>
+							</div>
+							<div class="col-md-8 pa-0">
+								<div>
+									<input name="name" type="text" class="sm-input-text" />
+								</div>
+							</div>
+
+
+						</div>
+						<div class="row">
+							<div class="col-md-3 pa-0">
+								<div class="col-md-3 sm-ico-po">
+									<div class="sm-input-ico">
+										<i class="fa fa-phone fa-2x"></i>
+									</div>
+								</div>
+								<div class="col-md-8 pa-0">
+									<div class="sm-input-title">
+										电话
+									</div>
+								</div>
+							</div>
+							<div class="col-md-8 pa-0">
+								<div>
+									<input name="mobile"  type="text" class="sm-input-text" >
+								</div>
+							</div>
+
+
+						</div>
+						<div class="row ma-b-5 ma-t-5 ma-l-2 align-center">
+							<div class="col-md-3"></div>
+							<div class="col-md-6">
+								<div class="btn-bg">
+									<input type="submit" value="提交"  class="sm-sub-btn"/>
+								</div>
+							</div>
+							<div class="col-md-3"></div>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+		<!--加载弹窗 popup  pc端-->
+		<div class=" popup-po"   id="popup_container">
+			<div class="row xs-form-close-ico" id="form-close-ico">
+				<i class="fa fa-close fa-3x"></i>
+			</div>
+			<div class="popup-title">
+				免费试用或领取小程序代理资料
+			</div>
+			<div class="popup-info">
+				<form action="{:url('/plugin/wis/apiIndex/wechat_message')}" method="post" id="wechat_message2" onsubmit="return postform('wechat_message2');">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-3 pa-0">
+								<div class="col-md-4 " >
+									<div class="input-ico">
+										<i class="fa fa-user fa-3x "></i>
+									</div>
+								</div>
+								<div class="col-md-8 pa-0">
+									<div class="input-title">
+										姓名
+									</div>
+								</div>
+							</div>
+							<div class="col-md-8 pa-0">
+								<div>
+									<input name="name" type="text" class="input-text" />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 pa-0">
+								<div class="col-md-4 " >
+									<div class="input-ico">
+										<i class="fa fa-phone fa-3x "></i>
+									</div>
+								</div>
+								<div class="col-md-8 pa-0">
+									<div class="input-title">
+										电话
+									</div>
+								</div>
+							</div>
+							<div class="col-md-8 pa-0">
+								<div>
+									<input name="mobile"  type="text" class="input-text" >
+								</div>
+							</div>
+						</div>
+						<div class="row ma-b-5 ma-t-5 btn-row align-center">
+							<div class="col-md-4 ">
+								<div class="close-btn btn-bg" id="already-btn">
+									<a href="javascript:void(0)" >已填写</a>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="sub-container">
+									<input type="submit" value="提交"  class="sub-btn"/>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="close-btn btn-bg" id="close-btn">
+									<a href="javascript:void(0)" >稍后再来</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--加载弹窗结束-->
+
+		<script type="text/javascript">
+			function postform(id){
+				var note= $('#'+id);
+				$.post(note.attr('action'),note.serialize(),function(result){
+					var data = result.data;
+					alert(data.error);
+				});
+				return false;
+			}
+
+		</script>
+	<!--右侧结束 pc-->

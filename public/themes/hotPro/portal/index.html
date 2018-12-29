@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>智世旅游公众号管理系统</title>
+    <link href="__TMPL__/public/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="__TMPL__/public/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="__TMPL__/public/assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <script type="text/javascript" src="__TMPL__/public/assets/js/jquery-2.1.4.min.js"></script>
+    <script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/css/component.css" />
+    <script src="__TMPL__/public/assets/js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/colorbox.css" />
+</head>
+<body>
+<div class="w3-slider">
+    <div id="boxgallery" class="boxgallery" data-effect="effect-1">
+        <widget name="slides">
+            <php>
+                $features_count = count($widget['vars']['features']);
+                $rows = ceil($features_count/$features_count);
+            </php>
+            <for  start="1" end="$rows" comparison="elt" step="1" name="row">
+                <php>
+                    $first_row = ($row-1)*$features_count;
+                    $features = array_slice($widget['vars']['features'],$first_row,4);
+                </php>
+                <foreach name="features" item="vo">
+                    <div class="panel"><img src="/upload/{$vo.image|default=''}" alt="Image 1"/></div>
+
+                </foreach>
+            </for>
+        </widget>
+    </div>
+    <div class="w3layouts-header-title">
+        <h2>智世旅游公众号管理系统</h2>
+    </div>
+</div>
+<script src="__TMPL__/public/assets/js/classie.js"></script>
+<script src="__TMPL__/public/assets/js/boxesFx.js"></script>
+<script>
+    new BoxesFx( document.getElementById( 'boxgallery' ) );
+</script>
+
+<header>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="w3-logo">
+                    <h1><a href="#">智世旅游公众号管理系统</a></h1>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a class="active" href="index.html">首页</a></li>
+                    <li><a class="scroll" href="#w3-agile-about">关于我们</a></li>
+                    <li><a class="scroll" href="#agileits-specials">服务中心</a></li>
+                    <li><a class="scroll" href="#wthree-gallery">客户案例</a></li>
+                    <li><a class="scroll" href="#agileinfo-news">合作加盟</a></li>
+                    <li><a class="scroll" href="#w3-contact">联系我们</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="clearfix"></div>
+    </div>
+</header>
+
+<div class="w3-agileits-about-section" id="w3-agile-about">
+    <div class="container">
+        <widget name="about">
+
+        <div class="w3agile-about-section-head text-center">
+            <h3>{$widget.title}</h3>
+            <span></span>
+        </div>
+        <div class="about-section-grids" >
+            <div class="col-md-4 wthree-about-section-grid">
+                <img src="/upload/{$widget.vars.image|default=''}" alt="" />
+            </div>
+            <div class="col-md-4 wthree-about-section-grid" >
+                <h5>{$widget.vars.sub_title}</h5>
+                <p>{$widget.vars.sub_title1}</p>
+                <p>{$widget.vars.sub_title2}</p>
+            </div>
+            <div class="col-md-4 wthree-about-section-grid">
+                <h5>{$widget.vars.sub_title3}</h5>
+                <p>{$widget.vars.sub_title4}</p>
+                <p>{$widget.vars.sub_title5}</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        </widget>
+    </div>
+</div>
+
+<div class="agileits-w3layouts-specials" id="agileits-specials">
+    <h3>服务中心</h3>
+    <span></span>
+    <widget name="service1">
+    <div class="special-grids" >
+        <div class="col-md-6 special-left l-grids">
+            <figure class="effect-bubba">
+                <img src="/upload/{$widget.vars.image|default=''}" alt=""/>
+                <figcaption>
+                    <h4>{$widget.title}</h4>
+                    <p>{$widget.vars.sub_title}</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-6 special-right">
+            <div class="sp-wid">
+                <h4>{$widget.vars.sub_title1}</h4>
+                <p>{$widget.vars.sub_title2}</p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    </widget>
+    <widget name="service2">
+    <div class="where-spl" >
+        <div class="col-md-6 special-right l-left">
+            <div class="l-wid">
+                <h4>{$widget.vars.sub_title}</h4>
+                <p>{$widget.vars.sub_title1}</p>
+            </div>
+
+        </div>
+        <div class="col-md-6 special-left l-right l-grids">
+            <figure class="effect-bubba">
+                <img src="/upload/{$widget.vars.image|default=''}" alt=""/>
+                <figcaption>
+                    <h4>{$widget.title}</h4>
+                    <p>{$widget.vars.sub_title2}</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    </widget>
+    <widget name="service3">
+    <div class="spl-bot" >
+        <div class="col-md-6 special-left spl-bot-right l-grids">
+            <figure class="effect-bubba">
+                <img class="img-responsive" src="/upload/{$widget.vars.image|default=''}" alt=" "/>
+                <figcaption>
+                    <h4>{$widget.title}</h4>
+                    <p>{$widget.vars.sub_title}</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-md-6 spl-bot-left">
+            <h4>{$widget.vars.sub_title1}</h4>
+            <p>{$widget.vars.sub_title2}</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    </widget>
+</div>
+
+
+<div class="gallery text-center" id="wthree-gallery" >
+    <div class="container">
+        <widget name="gallerys">
+        <h3 class="agileits_head">{$widget.title}</h3>
+        </widget>
+        <span class="w3-line"></span>
+        <div class="w3l_gallery_grids">
+            <div class="bs-example bs-example-tabs wthree_example_tab" role="tabpanel" data-example-id="togglable-tabs">
+                <div class="w3l_gallery_grids1" >
+                    <widget name="gallerys">
+                        <php>
+                            $features_count = count($widget['vars']['features']);
+                            $rows = ceil($features_count/$features_count);
+                        </php>
+                        <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                            <php>
+                                $first_row = ($row-1)*$features_count;
+                                $features = array_slice($widget['vars']['features'],$first_row,6);
+                            </php>
+                            <foreach name="features" item="vo">
+                                <div class="col-md-4 w3l_gallery_grid">
+                                    <div class="agileinfo_gallery_grid">
+                                        <a class="group1" href="/upload/{$vo.image|default=''}" >
+                                            <div class="hovereffect">
+                                                <img src="/upload/{$vo.image|default=''}" alt=" " class="img-responsive" />
+                                                <div class="overlay">
+                                                    <p class="info">查看大图</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </foreach>
+                        </for>
+                    </widget>
+
+
+
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__TMPL__/public/assets/js/jquery.colorbox.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".group1").colorbox({rel:'group1'});
+        $(".group2").colorbox({rel:'group2', transition:"fade"});
+        $(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+        $(".group4").colorbox({rel:'group4', slideshow:true});
+        $(".ajax").colorbox();
+        $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+        $(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+        $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+        $(".inline").colorbox({inline:true, width:"50%"});
+        $(".callbacks").colorbox({
+            onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+            onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+            onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+            onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+            onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+        });
+
+        $('.non-retina').colorbox({rel:'group5', transition:'none'})
+        $('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+
+        $("#click").click(function(){
+            $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+            return false;
+        });
+    });
+</script>
+
+<div class="news-section" id="agileinfo-news">
+    <div class="container" >
+        <div class="agileits-news-section-head text-center">
+            <widget name="cooperation">
+
+            <h3 class="agileits_head">{$widget.title}</h3>
+            </widget>
+            <span class="w3-line"></span>
+        </div>
+        <div class="news-section-grids" >
+            <widget name="cooperation">
+                <php>
+                    $features_count = count($widget['vars']['features']);
+                    $rows = ceil($features_count/$features_count);
+                </php>
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*$features_count;
+                        $features = array_slice($widget['vars']['features'],$first_row,3);
+                    </php>
+                    <foreach name="features" item="vo">
+                        <div class="col-md-4 w3ls-news-section-grid">
+                            <img src="/upload/{$vo.image|default=''}" alt="" />
+                            <div class="info">
+                                <h5>{$vo.title}</h5>
+                                <label>{$vo.content}</label>
+
+                            </div>
+                        </div>
+
+                    </foreach>
+                </for>
+            </widget>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="contact-section" id="w3-contact">
+    <div class="container">
+        <div class="contact-section-head text-center">
+            <widget name="contact">
+
+            <h3>{$widget.title}</h3>
+            </widget>
+            <span></span>
+        </div>
+
+        <div class="w3l-contact-form-bottom">
+            <div class="col-md-12 w3ls-address text-center" >
+                <widget name="contact">
+                <address>
+                    <strong style="font-size: 18px;">地址 :</strong>
+                    <p style="font-size: 15px;">{$widget.vars.sub_title}</p>
+                    <strong><abbr style="font-size: 18px;">电话 :</abbr></strong>
+                    <p style="font-size: 15px;">{$widget.vars.sub_title1}</p>
+                    <strong><abbr style="font-size: 18px;">邮箱 :</abbr></strong>
+                    <p style="font-size: 15px;"> {$widget.vars.sub_title2}</p>
+                </address>
+                </widget>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container text-center" style="text-align: center;">
+        <p >Copyright &copy; 智世(厦门)网络科技有限公司 <a href="http://www.world-is-smart.com/" target="_blank" title="智世科技"></a></p>
+        <div class="clearfix"></div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<script type="text/javascript" src="__TMPL__/public/assets/js/move-top.js"></script>
+<script type="text/javascript" src="__TMPL__/public/assets/js/easing.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+    });
+</script>
+
+</body>
+</html>

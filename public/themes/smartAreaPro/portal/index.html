@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>智世智慧景区管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="__TMPL__/public/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="__TMPL__/public/assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel='stylesheet' type='text/css' href='__TMPL__/public/assets/css/jquery.easy-gallery.css' />
+    <script type="text/javascript" src="__TMPL__/public/assets/js/jquery-2.1.4.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="__TMPL__/public/assets/js/move-top.js"></script>
+    <script type="text/javascript" src="__TMPL__/public/assets/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+<div class="banner">
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <h1><a href="index.html">智世科技 <span>智慧景区管理系统</span></a></h1>
+            </div>
+            <div class="mail-phone">
+
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="banner-info">
+            <ul>
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="#about" class="scroll hvr-radial-out">关于我们</a></li>
+                <li><a href="#services" class="scroll hvr-radial-out">服务中心</a></li>
+                <li><a href="#gallery" class="scroll hvr-radial-out">客户案例</a></li>
+                <li><a href="#team" class="scroll hvr-radial-out">合作加盟</a></li>
+                <li><a href="#mail" class="scroll hvr-radial-out">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="about" id="about">
+    <widget name="about">
+    <div class="col-md-6 about-left">
+        <h3>{$widget.vars.sub_title1}<span>{$widget.vars.sub_title2}</span></h3>
+        <i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i>
+        <p>{$widget.vars.sub_title3}</p>
+    </div>
+    <div class="col-md-6 about-right">
+        <div class="content-item">
+
+            <div class="overlay"></div>
+
+            <div class="corner-overlay-content">查看</div>
+
+            <div class="overlay-content">
+                <h2>{$widget.vars.sub_title4}</h2>
+                <p>{$widget.vars.sub_title5}</p>
+            </div>
+        </div>
+    </div>
+    </widget>
+    <div class="clearfix"> </div>
+</div>
+
+<div class="services" id="services">
+    <div class="container">
+        <widget name="service">
+
+        <h3>{$widget.title}</h3>
+        <p class="qui"><span>{$widget.vars.sub_title}</span></p>
+        </widget>
+
+        <div class="services-grids">
+            <widget name="service">
+
+                <div class="col-md-6 services-grid">
+                    <div class="services-grid1">
+                        <div class="col-md-8 services-grid-left">
+                            <h4>{$widget.vars.sub_title1}</h4>
+                            <p>{$widget.vars.sub_title2}</p>
+                        </div>
+                        <div class="col-md-4 services-grid-right">
+                            <div class="services-grid-right-grid hvr-radial-out">
+                                <span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="services-grid1">
+                        <div class="col-md-8 services-grid-left">
+                            <h4>{$widget.vars.sub_title3}</h4>
+                            <p>{$widget.vars.sub_title4}</p>
+                        </div>
+                        <div class="col-md-4 services-grid-right">
+                            <div class="services-grid-right-grid hvr-radial-out">
+                                <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 services-grid">
+                    <div class="services-grid1">
+                        <div class="col-md-4 services-grid-right">
+                            <div class="services-grid-right-grid hvr-radial-out">
+                                <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-8 services-grid-left services-grid-left1">
+                            <h4>{$widget.vars.sub_title5}</h4>
+                            <p>{$widget.vars.sub_title6}</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="services-grid1">
+                        <div class="col-md-4 services-grid-right">
+                            <div class="services-grid-right-grid hvr-radial-out">
+                                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-8 services-grid-left services-grid-left1">
+                            <h4>{$widget.vars.sub_title7}</h4>
+                            <p>{$widget.vars.sub_title8}</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                </div>
+            </widget>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+<div class="gallery" id="gallery">
+    <div class="container">
+        <widget name="galarys">
+
+        <h3>{$widget.title}</h3>
+        <p class="qui"><span>{$widget.vars.sub_title}</span></p>
+            <div class="gallery-grids">
+                <div class="col-md-6 gallery-grids-left">
+                    <div class="gallery-grid">
+                        <img src="/upload/{$widget.vars.image1|default=''}"  alt=" " />
+
+                    </div>
+                    <div class="gallery-grids-left-sub">
+                        <div class="col-md-6 gallery-grids-left-subl">
+                            <div class="gallery-grid">
+                                <img src="/upload/{$widget.vars.image2|default=''}"  alt=" " />
+                            </div>
+                            <div class="gallery-grid gallery-grid-sub">
+                                <img src="/upload/{$widget.vars.image3|default=''}"  alt=" " />
+                            </div>
+                        </div>
+                        <div class="col-md-6 gallery-grids-left-subr">
+                            <div class="gallery-grid">
+                                <img src="/upload/{$widget.vars.image4|default=''}"  alt=" " />
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="col-md-6 gallery-grids-left">
+                    <div class="col-md-6 gallery-grids-right">
+                        <div class="gallery-grid">
+                            <img src="/upload/{$widget.vars.image5|default=''}"  alt=" " />
+                        </div>
+                    </div>
+                    <div class="col-md-6 gallery-grids-right">
+                        <div class="gallery-grid">
+                            <img src="/upload/{$widget.vars.image6|default=''}"  alt=" " />
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="gallery-grids-right1">
+                        <div class="gallery-grid">
+                            <img src="/upload/{$widget.vars.image7|default=''}" alt=" " />
+                        </div>
+                    </div>
+                    <div class="col-md-6 gallery-grids-right">
+                        <div class="gallery-grid">
+                            <img src="/upload/{$widget.vars.image8|default=''}"  alt=" " />
+                        </div>
+                    </div>
+                    <div class="col-md-6 gallery-grids-right">
+                        <div class="gallery-grid">
+                            <img src="/upload/{$widget.vars.image9|default=''}"  alt=" " />
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+                <script type='text/javascript' src='__TMPL__/public/assets/js/jquery.easy-gallery.js' ></script>
+                <script type='text/javascript'>
+                    $('.gallery').easyGallery();
+                </script>
+            </div>
+        </widget>
+    </div>
+</div>
+
+<div class="team" id="team">
+    <div class="container">
+        <widget name="cooporations">
+
+        <h3>{$widget.title}</h3>
+        <p class="qui"><span>{$widget.vars.sub_title}</span></p>
+        </widget>
+
+        <div class="team-grids">
+            <widget name="cooporations">
+                <php>
+                    $features_count = count($widget['vars']['features']);
+                    $rows = ceil($features_count/$features_count);
+                </php>
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*$features_count;
+                        $features = array_slice($widget['vars']['features'],$first_row,4);
+                    </php>
+                    <foreach name="features" item="vo">
+                        <div class="col-md-3 team-grid">
+                            <div class="pic">
+                                <div class="stack twisted">
+                                    <img src="/upload/{$vo.image|default=''}" alt=" " class="img-responsive" />
+                                </div>
+                                <div class="pic-caption top-to-bottom">
+                                    <h5 class="pic-title"></h5>
+                                </div>
+                            </div>
+                            <h4>{$vo.title}</h4>
+
+                        </div>
+                    </foreach>
+                </for>
+            </widget>
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer mail" id="mail">
+    <widget name="contact">
+
+    <h3 style="font-size: 3em;">{$widget.title}</h3>
+    <p class="qui"><span>{$widget.vars.sub_title0}</span></p>
+    </widget>
+
+    <div class="container">
+        <ul class="footer-nav">
+
+        </ul>
+        <ul class="social-nav model-3d-0 footer-social">
+
+        </ul>
+
+        <h3>
+            <widget name="contact">
+                <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>{$widget.vars.sub_title}<span>
+                <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>{$widget.vars.sub_title1}</span>
+                <i class="glyphicon glyphicon-envelope " aria-hidden="true"></i>{$widget.vars.sub_title2}
+            </widget>
+        </h3>
+        <div class="mail-foot">
+        </div>
+    </div>
+    <div class="copy-right">
+        <p>Copyright &copy; 智世（厦门）网络科技有限公司 <a href="http://www.world-is-smart.com/" target="_blank" title="智世科技"></a> </p>
+    </div>
+</div>
+
+<script src="__TMPL__/public/assets/js/bootstrap.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Merlin HTML/CSS template">
+    <meta name="author" content="Hasan Alibegic">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>智世零售公众号管理系统</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" async defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" async defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.2/venobox.css" async defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" async defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" async defer>
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/style.css" async defer>
+
+</head>
+<body>
+
+
+<div class="loader">
+    <div class="loading"></div>
+</div>
+<section id="home" class="page overlay">
+    <div class="container">
+        <div class="content cover text-center">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+</section>
+<div id="navbar-top">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-white" role="navigation">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <a class="navbar-brand nav-external" href="#home">智世零售公众号管理系统</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">关于我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">解决方案</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#clients">经典案例</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">合作伙伴</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<section id="services" class="page">
+    <div class="container">
+        <div class="content text-center">
+            <div class="heading">
+                <widget name="about">
+
+                <h2 class="mt-0 mb-4">{$widget.title}</h2>
+                <div class="border"></div>
+                <p class="mt-4 mb-0">{$widget.vars.sub_title}</p>
+                </widget>
+
+            </div>
+            <div class="row">
+                <widget name="about">
+                    <div class="col-sm-4 service animated hiding" data-animation="fadeInUp" data-delay="300">
+                        <i class="fa fa-globe fa-5x"></i>
+                        <h3 class="mt-5 mb-4"><a href="#">{$widget.vars.sub_title1}</a></h3>
+                        <p>{$widget.vars.sub_title2}</p>
+                    </div>
+                    <div class="col-sm-4 service animated hiding" data-animation="fadeInUp" data-delay="600">
+                        <i class="fa fa-cloud fa-5x"></i>
+                        <h3 class="mt-5 mb-4"><a href="#">{$widget.vars.sub_title3}</a></h3>
+                        <p>{$widget.vars.sub_title4}</p>
+                    </div>
+                    <div class="col-sm-4 service animated hiding" data-animation="fadeInUp" data-delay="900">
+                        <i class="fa fa-mobile fa-5x"></i>
+                        <h3 class="mt-5 mb-4"><a href="#">{$widget.vars.sub_title5}</a></h3>
+                        <p>{$widget.vars.sub_title6}</p>
+                    </div>
+                </widget>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="work" class="page">
+    <div class="container">
+        <div class="content text-center">
+            <div class="heading">
+                <widget name="methods">
+
+                <h2 class="mt-0 mb-4">{$widget.title}</h2>
+                <div class="border"></div>
+                <p class="mt-4 mb-0">{$widget.vars.sub_title}</p>
+                </widget>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="portfolio">
+                        <ul class="filters list-inline">
+
+                        </ul>
+                        <ul class="items list-unstyled clearfix animated hiding mb-0" data-animation="fadeInRight">
+                            <widget name="methods">
+                                <php>
+                                    $features_count = count($widget['vars']['features']);
+                                    $rows = ceil($features_count/$features_count);
+                                </php>
+                                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                                    <php>
+                                        $first_row = ($row-1)*$features_count;
+                                        $features = array_slice($widget['vars']['features'],$first_row,8);
+                                    </php>
+                                    <foreach name="features" item="vo">
+                                        <li class="item branding">
+                                            <a href="index.html" data-gall="work" data-vbtype="ajax">
+                                                <img src="/upload/{$vo.image|default=''}" height="173px"alt="">
+                                                <div class="overlay">
+                                                    <span>{$vo.title}</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </foreach>
+                                </for>
+                            </widget>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="clients" class="page">
+    <div class="container">
+        <div class="content text-center">
+            <div class="row">
+                <div class="col-sm-12 animated hiding" data-animation="fadeInDown">
+                    <div id="testimonials" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li data-target="#testimonials" data-slide-to="0" class="active"></li>
+                            <li data-target="#testimonials" data-slide-to="1" class=""></li>
+                            <li data-target="#testimonials" data-slide-to="2" class=""></li>
+                            <li data-target="#testimonials" data-slide-to="3" class=""></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <widget name="gallary">
+                                <div class="carousel-item active flex-column">
+                                    <p class="quote mb-4">
+                                        {$widget.vars.sub_title}</p>
+                                    <p class="client mb-5">{$widget.vars.sub_title1}</p>
+                                </div>
+                                <div class="carousel-item flex-column">
+                                    <p class="quote mb-4">
+                                        {$widget.vars.sub_title2}</p>
+                                    <p class="client mb-5">{$widget.vars.sub_title3}</p>
+                                </div>
+                                <div class="carousel-item flex-column">
+                                    <p class="quote mb-4">{$widget.vars.sub_title4}</p>
+                                    <p class="client mb-5">{$widget.vars.sub_title5}</p>
+                                </div>
+                                <div class="carousel-item flex-column">
+                                    <p class="quote mb-4">{$widget.vars.sub_title6}</p>
+                                    <p class="client mb-5">{$widget.vars.sub_title7}</p>
+                                </div>
+                            </widget>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about" class="page">
+    <div class="container">
+        <div class="content text-center">
+            <div class="heading">
+                <widget name="cooporations">
+
+                <h2 class="mt-0 mb-4">{$widget.title}</h2>
+                <div class="border"></div>
+                <p class="mt-4 mb-0">{$widget.vars.sub_title}</p>
+                </widget>
+
+            </div>
+            <div class="row">
+                <widget name="cooporations">
+                    <php>
+                        $features_count = count($widget['vars']['features']);
+                        $rows = ceil($features_count/$features_count);
+                    </php>
+                    <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                        <php>
+                            $first_row = ($row-1)*$features_count;
+                            $features = array_slice($widget['vars']['features'],$first_row,4);
+                        </php>
+                        <foreach name="features" item="vo">
+                            <div class="col-md-3 col-sm-6 col-xs-12 teammate animated hiding" data-animation="fadeInLeft" data-delay="600">
+                                <div class="profile-photo">
+                                    <img class="img-fluid" src="/upload/{$vo.image|default=''}" alt="">
+                                </div>
+                                <div class="bio mt-4">
+                                    <h5 class="mb-1">{$vo.title}</h5>
+                                    <p>{$vo.icon}</p>
+                                    <div class="border mt-4 mb-4"></div>
+                                    <p>{$vo.content}</p>
+                                    <ul class="list-inline">
+                                    </ul>
+                                </div>
+                            </div>
+                        </foreach>
+                    </for>
+                </widget>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="page overlay">
+    <div class="container">
+        <div class="content cover text-center">
+            <div class="heading">
+                <widget name="contact">
+
+                <h2 class="mt-0 mb-4">{$widget.title}</h2>
+                <div class="border"></div>
+                <p class="mt-4 mb-0">{$widget.vars.sub_title0}</p>
+                </widget>
+
+            </div>
+            <div class="row">
+                <widget name="contact">
+                    <div class="col-sm-4 animated hiding" data-animation="fadeInRight" data-delay="600">
+                        <i class="fa fa-map-marker fa-3x"></i>
+                        <a href="#">{$widget.vars.sub_title}</a>
+                    </div>
+                    <div class="col-sm-4 animated hiding" data-animation="fadeInDown" data-delay="300">
+                        <i class="fa fa-phone fa-3x"></i>
+                        <a href="tel:0592-5251050">{$widget.vars.sub_title1}</a>
+                    </div>
+                    <div class="col-sm-4 animated hiding" data-animation="fadeInLeft" data-delay="600">
+                        <i class="fa fa-envelope fa-3x"></i>
+                        <a href="services@li-xing.com.cn">{$widget.vars.sub_title2}</a>
+                    </div>
+                </widget>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 animated hiding" data-animation="fadeInUp">
+
+                <p class="copyright">
+                    Created by  &middot; 智世(厦门)网络科技有限公司 <a href="http://www.world-is-smart.com/" target="_blank" title="智世科技"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.2/venobox.min.js"></script>
+<script src="__TMPL__/public/assets/js/script.js?v=1.0"></script>
+</body>
+
+</html>

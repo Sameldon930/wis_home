@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>智世营销公众号管理系统</title>
+
+    <link rel="shortcut icon" href="__TMPL__/public/assets/images/core-img/favicon.ico">
+
+
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/style.css">
+
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/responsive.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/css/bootstrap.min.css">
+
+
+</head>
+
+<body class="dark_version">
+<div id="preloader"></div>
+
+<header class="header_area">
+    <div class="main_header_area" id="sticky">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-2 col-xs-9">
+                    <div class="logo_area">
+                        <a href="index.html" style="font-size: 18px;">营销公众号管理系统</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-10 col-xs-12">
+                    <div class="main_menu_area">
+                        <div class="mainmenu">
+                            <nav>
+                                <ul id="nav">
+                                    <li class="current_page_item"><a href="#home">首页</a></li>
+                                    <li><a href="#about">关于我们</a></li>
+                                    <li><a href="#service">服务中心</a></li>
+                                    <li><a href="#work">产品中心</a></li>
+                                    <li><a href="#blog">合作加盟</a></li>
+                                    <li><a href="#contact">联系我们</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="welcome_area" id="home">
+    <div class="welcome_slides">
+        <widget  name="slides">
+            <php>
+                $features_count = count($widget['vars']['features']);
+                $rows = ceil($features_count/$features_count);
+            </php>
+            <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                <php>
+                    $first_row = ($row-1)*$features_count;
+                    $features = array_slice($widget['vars']['features'],$first_row,2);
+                </php>
+                <foreach name="features" item="vo">
+                    <div class="single_slide" style="background-image: url(/upload/{$vo.image|default=''});">
+                        <div class="slide_text">
+                            <div class="table">
+                                <div class="table_cell">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreach>
+            </for>
+
+        </widget>
+
+    </div>
+</section>
+
+<section class="special_feature_area">
+    <widget name="features">
+        <div class="container">
+        <php>
+
+            $features_count = count($widget['vars']['features']);
+
+            $rows = ceil($features_count/1);
+        </php>
+
+            <div class="row">
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*1;
+                        $features = array_slice($widget['vars']['features'],$first_row,1);
+                    </php>
+                    <foreach name="features" item="vo">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="single_feature wow fadeInUp" >
+                                <div class="bg-icon">
+                                    <span class="fa fa-{$vo.icon}"></span>
+                                </div>
+                                <div class="feature_img">
+                                    <span class="fa fa-{$vo.icon}"></span>
+                                </div>
+                                <div class="feature_text">
+                                    <h5>{$vo.title}</h5>
+                                    <p>{$vo.content}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </foreach>
+                </for>
+            </div>
+
+
+    </div>
+    </widget>
+</section>
+
+<section class="about_area" id="about">
+    <div class="container">
+        <div class="about_us_area">
+            <widget name="about">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 section_padding_100 wow fadeInUp">
+                    <div class="section_heading">
+                        <p>{$widget.vars.sub_title}</p>
+                        <h3>{$widget.title}</h3>
+                    </div>
+
+                    <div class="about_us_text">
+                        <p>{$widget.vars.sub_title1}</p>
+                        <p>{$widget.vars.sub_title2}</p>
+                        <p>{$widget.vars.sub_title3}</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4 wow fadeInRight">
+                    <div class="about_us_thumb">
+                        <img src="upload/{$widget.vars.image|default=''}" alt="">
+                    </div>
+                </div>
+
+            </div>
+            </widget>
+        </div>
+    </div>
+</section>
+
+<section class="what_we_do_area section_padding_100_70" id="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section_heading">
+                    <p>our best service</p>
+                    <widget name="services">
+                        <h3>{$widget.title}</h3>
+                    </widget>
+                </div>
+            </div>
+        </div>
+        <widget name="services">
+
+            <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                <php>
+                    $features_count = count($widget['vars']['features']);
+                    $rows = ceil($features_count/4);
+                </php>
+
+                <div class="row">
+                    <php>
+                        $first_row = ($row-1)*4;
+                        $features = array_slice($widget['vars']['features'],$first_row,4);
+                    </php>
+                    <foreach name="features" item="vo">
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="single_service wow fadeInUp" >
+                                <div class="single_service_img">
+                                    <img src="upload/{$vo.image|default=''}" alt="">
+                                </div>
+                                <div class="single_service_title">
+                                    <h4>{$vo.title}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </foreach>
+                </div>
+            </for>
+        </widget>
+    </div>
+</section>
+
+<section class="gallery_area clearfix section_padding_100" id="work">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section_heading">
+                    <p>what we create</p>
+                    <widget name="gallerys">
+                    <h3>{$widget.title}</h3>
+                    </widget>
+                </div>
+            </div>
+        </div>
+    </div>
+    <widget name="gallerys">
+        <for start="1" end="$rows" comparison="elt" step="1" name="row">
+            <php>
+                $features_count = count($widget['vars']['features']);
+                $rows = ceil($features_count/4);
+            </php>
+            <div class="gallery_full_width_images_area">
+                <php>
+                    $first_row = ($row-1)*4;
+                    $features = array_slice($widget['vars']['features'],$first_row,4);
+                </php>
+                <foreach name="features" item="vo">
+                    <div class="single_gallery_item wow fadeInUp" >
+                        <a data-target="#works_details" data-toggle="modal" href="#">
+                            <img src="upload/{$vo.image|default=''}" alt="">
+                            <div class="hover_overlay">
+                                <div class="gallery_info">
+                                    <h5>{$vo.title}</h5>
+                                    <p>{$vo.content}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </foreach>
+            </div>
+        </for>
+    </widget>
+</section>
+
+
+
+<section class="blog_area section_padding_100_70" id="blog">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section_heading">
+                    <p>Partnership and</p>
+                    <widget name="cooperation">
+                    <h3>{$widget.title}</h3>
+                    </widget>
+                </div>
+            </div>
+        </div>
+        <widget name="cooperation">
+            <php>
+                $features_count = count($widget['vars']['features']);
+                $rows = ceil($features_count/1);
+            </php>
+
+                    <div class="row">
+                        <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                            <php>
+                                $first_row = ($row-1)*1;
+                                $features = array_slice($widget['vars']['features'],$first_row,1);
+                            </php>
+                            <foreach name="features" item="vo">
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <div class="single_latest_news_area wow fadeInUp" >
+                                        <div class="single_latest_news_img_area">
+                                            <img src="/upload/{$vo.image|default=''}" alt="">
+                                        </div>
+                                        <div class="single_latest_news_text_area">
+                                            <div class="news_title">
+                                            </div>
+
+                                            <div class="news_content">
+                                                <p>{$vo.title}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </foreach>
+                        </for>
+                     </div>
+        </widget>
+    </div>
+</section>
+
+<section class="message_now_area section_padding_100_70" id="contact" style="background: #1a1a1a;">
+    <div class="container">
+        <div class="row">
+            <div class="section_heading text-center">
+                <p style="color: #fff;">contact us</p>
+                <widget name="contact">
+                <h3 style="color: #fff;">{$widget.title}</h3>
+                </widget>
+            </div>
+            <div class="col-md-2"></div>
+            <widget name="contact">
+                <div class=" col-md-5 address-area wow fadeInUp" >
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="single_part">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <p style="color: #fff;">{$widget.vars.sub_title}</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="single_part">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <a style="color: #fff;"href="tel:+0592-5251050">{$widget.vars.sub_title1}</a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="single_part">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <a style="color: #fff;"href="services@li-xing.com.cn">{$widget.vars.sub_title2}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-5   fadeInUp" data-wow-delay=".4s">
+                    <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+                        <img src="/upload/{$widget.vars.image|default=''}" width="80px" height="80px"alt="">
+                        <div style="color:#fff;font-size: 20px;margin-top: 20px;">{$widget.vars.sub_title3}</div>
+                    </div>
+                </div>
+            </widget>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="footer_area">
+    <div class="footer_bottom_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="footer_bottom wow fadeInDown" data-wow-delay=".2s">
+                        <p>Made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#">智世(厦门)网络科技有限公司</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="__TMPL__/public/assets/js/jquery-2.2.4.min.js"></script>
+
+<script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+
+<script src="__TMPL__/public/assets/js/jquery.waypoints.min.js"></script>
+
+<script src="__TMPL__/public/assets/js/owl.carousel.min.js"></script>
+
+<script src="__TMPL__/public/assets/js/ajax-contact.js"></script>
+
+<script src="__TMPL__/public/assets/js/meanmenu.js"></script>
+
+<script src="__TMPL__/public/assets/js/jquery.nav.min.js"></script>
+
+<script src="__TMPL__/public/assets/js/jquery.magnific-popup.min.js"></script>
+
+<script src="__TMPL__/public/assets/js/counterup.min.js"></script>
+
+<script src="__TMPL__/public/assets/js/jquery.scrollUp.js"></script>
+
+<script src="__TMPL__/public/assets/js/jquery.easing.1.3.js"></script>
+
+<script src="__TMPL__/public/assets/js/jquery.sticky.js"></script>
+
+<script src="__TMPL__/public/assets/js/wow.min.js"></script>
+
+<script src="__TMPL__/public/assets/js/jquery.stellar.min.js"></script>
+
+<script src="__TMPL__/public/assets/js/YTPlayer.min.js"></script>
+
+
+<script src="__TMPL__/public/assets/js/map-active.js"></script>
+
+<script src="__TMPL__/public/assets/js/custom.js"></script>
+
+</body>
+
+</html>

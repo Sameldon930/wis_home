@@ -1,0 +1,235 @@
+/*2018年7月27日 ---1.0*/
+
+body,.container,.container-full{
+    background: white;
+}
+
+
+.right-nav li{
+    margin-bottom: 15px;
+    border-bottom: solid 1px grey;
+}
+.right-nav-a{
+    color: black
+}
+.right-nav li:hover .right-nav-a {
+    color: red
+}
+
+.article_red:hover {
+    color: red;
+}
+/*#top-img{*/
+    /*height:300px;*/
+    /*width:100%;*/
+/*}*/
+.article-top-img{
+    width: 100%;
+    height: 220px;
+    background: url("../images/top-img02.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#content-row p>img{
+    /*width:95%;*/
+}
+.external{
+    font-size: 14px;
+}
+.row-white70{
+    width: 70%;
+    float: left;
+    padding-right: 20px;
+}
+.right-nav{
+    width: 22%;
+    float: left;
+    border: solid 1px black;
+    padding: 10px
+}
+
+.right-nav-pos{
+    position: fixed;
+    top: 100px;
+    right: 150px;
+    width: 300px;
+}
+.right-nav-pos2{
+    position: absolute;
+    bottom: 250px;
+    right: 150px;
+    width: 300px;
+}
+
+
+.left-sm-nav{
+    margin-bottom: 42px;
+    font-size: 14px;
+}
+
+.read-author{
+    width: 60%;
+    float: left;
+}
+.read-num{
+    width: 30%;
+    text-align: right;
+    float: right;
+}
+.info-img-w{
+    width: 35px;
+}
+
+.info-img-w-r{
+    width: 40px;
+}
+
+.title-top{
+    font-size: 28px;
+    font-weight: bold;
+    color: black ;
+    position: relative;
+    text-align:left;
+    margin-bottom: 1%;
+    font-family: "微软雅黑 ";
+}
+
+.description{
+    font-size: 14px;
+    color: #8F8F8F;
+    margin: 5% 0 ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /*height: 50px;*/
+}
+
+.overflow-heidden{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.company,.industry{
+    width: 100%;
+}
+
+
+.right-nav-titie{
+    width: 70%;
+    float: left;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 5%;
+    font-family: "微软雅黑 ";
+}
+.more{
+    width: 25%;
+    font-size: 14px;
+    float: left;
+    color: black;
+    /*font-weight: bold;*/
+    text-align: right;
+    margin-bottom: 9%;
+}
+.Recommend{
+    float: left;
+    width: 45%;
+    margin-right: 3%;
+}
+.Recommend-img{
+    height: 90px;
+    width: 100%;
+}
+.Recommend-title{
+    text-align: center;
+    font-size: 12px;
+}
+
+.font-size14{
+    font-size: 14px;
+}
+
+.ma-b-8{
+    margin-bottom: 8%;
+}
+
+.right-nav-titie2{
+    margin: 2% 0;
+}
+
+.disc-size{
+    font-size: 10px;
+}
+
+.font-size14:hover{
+    color: black;
+}
+.top-hover:hover{
+    color: black;
+}
+ .color-black-imp{
+        color: black !important;
+
+}
+.pa-l-r-0{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.text-anlign-justify{
+    text-align: justify;
+    letter-spacing: 0.1em
+}
+
+@media only screen and (max-width:768px){
+    .article-top-img{
+        height: 220px;
+        background: url("../images/700-article-top-img.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .xs-pa-l-15{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media only screen and (max-width:580px){
+
+    .article-top-img{
+        height: 220px;
+        background: url("../images/xs-top-img.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .read-author{
+        width: 71%;
+    }
+    .font-size14{
+        font-size: 12px;
+    }
+    .read-num{
+     width: 25%;
+    }
+}
+
+
+
+@media only screen and (max-width:480px){
+    #right-nav{
+        display: none;
+    }
+    .row-white70{
+        width: 100%;
+        padding-right: 0;
+    }
+
+}
+
+

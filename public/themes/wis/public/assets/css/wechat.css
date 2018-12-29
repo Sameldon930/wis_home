@@ -1,0 +1,765 @@
+.bg-fafa{
+    background: #fafafa;
+}
+.big-title-contanine{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 19%;
+    text-align: center;
+
+}
+.big-title-text{
+    width: 47%;
+    font-size: 40px;
+    color: #3882dc;
+    float: left;
+    text-align: center;
+}
+.big-title-hr{
+    width: 15%;
+    height: 1px;
+    border-bottom: 1px solid #9a9a9a;
+    padding-top: 2.5%;
+    float: left;
+    text-align: center;
+}
+.img-contaner{
+    margin: 5% 0;
+    margin-left: -2%;
+}
+
+/*头部结束*/
+/*小程序的盈利模式开始*/
+.bg-img-a{
+    background:url("../images/wechat/profit-bg.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.big-title-text2{
+    width: 47%;
+    font-size: 40px;
+    color: #ffffff;
+    float: left;
+    text-align: center;
+}
+.big-title-hr2{
+    width: 15%;
+    height: 1px;
+    border-bottom: 1px solid #ffffff;
+    padding-top: 2.5%;
+    float: left;
+    text-align: center;
+}
+
+.profit-ico{
+    padding: 35%;
+}
+.profit-title{
+    margin-top: -21%;
+    text-align: center;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+.profit-hr{
+    width: 15%;
+    border-bottom: 2px solid #ffffff;
+    margin:0 auto ;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+.profit-content{
+    font-size: 10px;
+    color: #FFFFFF;
+    text-align: center;
+}
+/*小程序的盈利模式结束*/
+
+/*小程序应用场景*/
+.applied-big-container{
+    margin-top: 5%;
+    padding: 0 5%;
+}
+.applied-container{
+    /*height: 150px;*/
+    box-shadow: 0 0 4px 0px #bbbbbb;
+    padding: 15% 0;
+    height: 330px;
+}
+.applied-ico{
+    width: 35%;
+    margin: 0% auto;
+    padding: 13% 0;
+}
+
+.applied-title{
+    text-align: center;
+    font-size: 30px;
+    color: #5f5f5f;
+}
+.applied-content{
+    text-align: center;
+    font-size: 10px;
+    color: #5f5f5f;
+    margin:10%  0;
+}
+
+/*小程序应用场景结束*/
+/*为什么选择微智小程序开始*/
+.routine{
+    background: url("../../wis/images/wechat/routine.jpg");
+}
+.h-295{
+    height: 295px;
+}
+
+.answer-container{
+    width: 45%;
+    float: left;
+    box-shadow: 0 0 15px 3px rgba(0,0,0,0.6);
+}
+.w-10{
+    width: 10%;
+    float: left;
+    height: 295px;
+
+}
+
+.bg-black{
+    width: 100%;
+    height: 295px;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+
+.answer-left-title{
+    padding-left: 5%;
+    line-height: 50px;
+    font-size: 36px;
+    color: #FFFFFF;
+    text-align: right;
+}
+.answer-content{
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 50px;
+}
+.answer-white-hr{
+    width: 1px;
+    height: 100px;
+    border: 1px solid #FFFFFF;
+    margin:  0 auto;
+
+}
+.ma-t-9{
+    margin-top: 9%;
+}
+.plan{
+    background: url("../../wis/images/wechat/plan.jpg");
+    background-size:cover ;
+    background-repeat:no-repeat ;
+}
+
+.price{
+    background: url("../../wis/images/wechat/price.jpg") ;
+    background-size:cover ;
+    background-repeat:no-repeat ;
+}
+
+.technology{
+    background: url("../../wis/images/wechat/technology.jpg");
+    background-size:cover ;
+    background-repeat:no-repeat ;
+}
+
+.server{
+    background: url("../../wis/images/wechat/server.jpg");
+    background-size:cover ;
+    background-repeat:no-repeat ;
+}
+
+
+.pa-t-8
+{
+    padding-top: 8%;
+}
+.answer-ma-t-6{
+    margin-top: 6%;
+}
+
+.answer-ma-t-5{
+    margin-top: 5%;
+}
+/*为什么选择微智小程序 结束*/
+
+/*精品案例 开始*/
+.case
+{
+    font-size: 40px;
+    color:#3482dc;
+    text-align: center;
+    margin-top: 5%;
+}
+.text-cen
+{
+    text-align: center;
+    padding: 10% 0;
+    font-size: 20px;
+    color: #5f5f5f;
+}
+.img-border{
+    box-shadow: 0 0 4px 0px #bbbbbb;
+}
+/*特效*/
+
+
+.overlay {
+    position: absolute;
+    z-index: 20;
+    overflow: hidden;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.overlay {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+}
+
+.img:hover .overlay {
+    height: 100%;
+}
+/*精品案例 结束*/
+/*精品案例 结束*/
+
+/*加入流程开始*/
+.flow
+{
+    font-size: 40px;
+    text-align: center;
+    color:#3482dc;
+    margin-top: 5%;
+}
+
+/*加入流程结束*/
+
+
+/*加载弹窗*/
+.popup-po{
+    width: 37%;
+    /*height: 368px;*/
+    display: none;
+    position: fixed;
+    top:35%;
+    left: 29%;
+    padding-left: 1%;
+    background: white;
+    box-shadow: 0  0 15px 0 rgba(238,238,238,0.8);
+}
+
+.popup-title{
+    font-size: 28px;
+    color: #3882dc;
+    text-align: center;
+    margin-bottom: 5%;
+}
+.popup-info{
+    width: 80%;
+    margin: 0 auto;
+}
+.btn-bg{
+    background:  #3882dc;
+    border-radius: 10px;
+}
+
+.xs-btn-bg{
+    background:  #1175f1;
+    border-radius: 10px;
+}
+.close-btn{
+    width: 120px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.sub-container{
+    width: 120px;
+    height: 45px;
+    background:  #3882dc;
+    border-radius: 10px;
+}
+.sub-btn{
+    width: 120px ;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+
+}
+.btn-row{
+    margin-left: -1%;
+}
+.close-btn a{
+    color: white;
+    font-size: 18px;
+}
+.input-ico{
+    color: #3882dc;
+    padding: 0;
+    padding-top: 55% !important;
+}
+
+.input-title{
+    font-size: 26px !important;
+    color: #3882dc;
+    line-height: 55px !important;
+    margin-left: 18%;
+}
+.input-text{
+    outline: none;
+    background: #eeeeee;
+    width: 100%;
+    height: 55px !important;
+    line-height: 55px !important;
+    font-size: 25px !important;
+}
+/*加载弹窗结束*/
+
+/*表单留言开始*/
+.right-side{
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    height: 300px;
+}
+.right-side-show{
+    width: 31px;
+    float: left;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: -64px;
+    background:  #3882dc;
+    font-size: 16px;
+    color: white;
+    border-radius: 3px;
+}
+.right-side-info{
+    width: 391px;
+    height: 210px;
+    background: #FFFFFF;
+    float: right;
+    box-shadow: 0  0 3px 0 rgba(238,238,238,0.8);
+    margin-right:5px;
+    display: none;
+}
+
+.side-title{
+    font-size: 16px;
+    color: #3882dc;
+    text-align: center;
+    margin: 5% 0;
+}
+
+.sm-input-ico{
+    color: #3882dc;
+    padding: 0;
+
+}
+
+.sm-input-title{
+    font-size: 16px !important;
+    color: #3882dc;
+    line-height: 35px !important;
+    margin-left: 18%;
+}
+.sm-input-text{
+    outline: none;
+    background: #eeeeee;
+    width: 100%;
+    height: 35px !important;
+    line-height: 35px !important;
+    font-size: 16px !important;
+}
+.sm-sub-btn{
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.sm-ico-po{
+ padding-top: 6% !important;
+}
+
+.right-side:hover .right-side-info{
+    display: block;
+}
+
+/*表单留言结束*/
+/*pc端结束*/
+
+/*手机端新排版*/
+
+/*时代，已经开启了小程序模式 开始*/
+.times-title1{
+    text-align: center;
+    font-size: 18px;
+    color: #5f5f5f;
+    margin:5% 0;
+}
+
+.times-title2{
+    text-align: center;
+    font-size: 13px;
+    color: #5f5f5f;
+}
+
+.times-ico-title-num{
+    font-size: 13px;
+    color: #5f5f5f;
+    text-align: center;
+    line-height: 16px;
+    margin-top: 10%;
+}
+.times-ico-title-txt{
+    font-size: 10px;
+    color: #5f5f5f;
+    text-align: center;
+    line-height: 16px;
+}
+.times-ico-pa{
+    padding: 0 2%;
+}
+/*时代，已经开启了小程序模式 结束*/
+/*一站式赚钱扶持计划开始*/
+
+.special-num{
+    color: #1175f1;
+    font-size: 16px;
+    font-weight: bold;
+}
+.money-form-bg{
+    background: url("../images/wechat/money-form-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.money-form-ma{
+    margin-top:10% ;
+    margin-bottom:10% ;
+}
+
+.money-form-title{
+    font-size: 12px;
+    text-align: center;
+    color: #5f5f5f;
+}
+.money-form-input-text{
+    width: 100%;
+    height: 40px !important;
+    line-height: 40px !important;
+    padding-left: 25px !important;
+    background: #FFFFFF;
+    border-radius: 25px !important;
+    outline: none;
+}
+
+.money-form-sub-bg{
+    width: 100% !important;
+    height: 35px !important;
+    background:url("../images/wechat/money-form-sub-bg.png") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.money-form-sub{
+    display: inline-block;
+    color: #FFFFFF;
+    /*line-height: 41px;*/
+    line-height: 2.8em;
+    padding-left: 15%;
+}
+/*一站式赚钱扶持计划结束*/
+/*快速扶持开始*/
+.fast-ico{
+    padding: 14%;
+}
+.fast-ico-title{
+    text-align: center;
+    color: #1175F1;
+    font-size: 14px;
+    font-weight: bold;
+}
+.fast-ico-text{
+    text-align: center;
+    color: #5f5f5f;
+    font-size: 10px;
+    height: 50px;
+}
+/*快速扶持结束*/
+/*商家和商机只差一个小程序 开始*/
+.business-bg{
+    background:url("../images/wechat/business-bg.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.color-white{
+    color: white !important;
+}
+
+
+.business-code-img-title{
+    color: white;
+    font-size:15px;
+    text-align: center;
+    margin-top: 15%;
+}
+/*商家和商机只差一个小程序 结束*/
+
+/*各地区负责人开始*/
+
+.person-in-charge-img{
+    padding:0 20%
+}
+.person-in-charge-name,
+.person-in-charge-region,
+.person-in-charge-tel,
+.xs-person-in-charge-name,
+.xs-person-in-charge-region,
+.xs-person-in-charge-tel{
+    text-align: center;
+    color: #5f5f5f;
+}
+
+.person-in-charge{
+    border-radius: 2%;
+    box-shadow: 0 0 4px 0px #5f5f5f;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+.person-in-charge-name{
+    font-size: 18px;
+    margin: 10% 0;
+}
+.person-in-charge-region{
+    font-size: 22px;
+    margin-bottom: 6%;
+}
+.person-in-charge-tel{
+    font-size: 20px;
+}
+
+
+
+.xs-person-in-charge-po{
+    text-align: center;
+    margin: 0 12.5%;
+}
+
+.xs-person-in-charge{
+    border-radius: 2%;
+    box-shadow: 0 0 4px 0px #5f5f5f;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    margin-bottom: 15%;
+}
+
+.xs-person-in-charge-img{
+    padding:0 20%
+}
+
+.xs-person-in-charge-name{
+    font-size: 10px;
+    margin: 10% 0;
+}
+.xs-person-in-charge-region{
+    font-size: 12px;
+    margin-bottom: 6%;
+}
+.xs-person-in-charge-tel{
+    font-size: 11px;
+}
+
+
+/*各地区负责人结束*/
+
+
+/*底部表单*/
+.xs-form-show{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    background:  #1175f1;
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    z-index: 999;
+}
+.xs-form-title{
+    font-size: 16px;
+    color: #1175f1;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+.xs-form-title2{
+    font-size: 16px;
+    color: #1175f1;
+    text-align: center;
+}
+
+.xs-form-info{
+    width: 100%;
+    background: #FFFFFF;
+    float: right;
+    box-shadow: 0  0 3px 0 rgba(238,238,238,0.8);
+    /*display: none;*/
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    z-index: 1000;
+}
+
+.xs-form-close-ico{
+    color: #1175f1;
+    text-align: right;
+    padding-right: 10%;
+    margin-top: 2%;
+}
+.xs-form-input-ico{
+    color: #1175f1;
+}
+.xs-form-ico-po{
+    padding-top: 5% !important;
+}
+.xs-form-input-title{
+    font-size: 16px !important;
+    color: #1175f1;
+    line-height: 35px !important;
+    margin-left: 15%;
+}
+.xs-form-input-text{
+    outline: none;
+    background: #eeeeee;
+    width: 100%;
+    height: 35px !important;
+    line-height: 35px !important;
+    font-size: 16px !important;
+    margin-left: -12%;
+}
+.xs-input-row{
+    margin-left: 2%;
+}
+.xs-form-sub-btn{
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+
+}
+
+
+
+/*底部表单结束*/
+
+
+/*手机端新排版结束*/
+
+
+
+/*手机端*/
+@media screen and (max-width: 769px){
+    .container{
+        padding-top:10px ;
+        padding-bottom: 10px;
+    }
+    .big-title-contanine{
+        padding-left: 0;
+    }
+    .big-title-text,.big-title-text2{
+        width: 100%;
+        font-size: 25px;
+    }
+    .big-title-hr,.big-title-hr2{
+        display: none;
+    }
+
+    .img-contaner{
+        margin: 0;
+        margin-left:-2%;
+    }
+    
+    /*小程序应优势结束*/
+    .profit-ico{
+        padding: 30%;
+    }
+
+    /*小程序盈利模式结束*/
+    .applied-big-container{
+        padding: 0 ;
+    }
+    /*小程序应用场景结束*/
+
+    .w-10{
+        display: none;
+    }
+    .answer-container{
+        width: 100%;
+        box-shadow:none;
+    }
+    .answer-left-title{
+        text-align:center;
+        font-size: 28px;
+    }
+    .answer-white-hr{
+        width: 90%;
+        height: 1px;
+        border: none;
+        border-bottom:1px solid #FFFFFF;
+    }
+    .answer-content{
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 20px;
+        text-align:center;
+    }
+    .bg-black{
+        height: auto;
+    }
+    .answer-ma-t-6{
+        margin-top: 9%;
+    }
+    .xs-answer-ma-t-5{
+        margin-top: 5%;
+    }
+
+    .right-side-show{
+        margin-top: 125px;
+    }
+    .right-side-info{
+        height: 270px;
+    }
+}

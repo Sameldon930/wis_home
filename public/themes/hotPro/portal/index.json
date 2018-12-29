@@ -1,0 +1,405 @@
+{
+    "name": "首页",
+    "action": "portal/Index/index",
+    "description": "首页模板文件",
+    "order": 5.0,
+    "more": {
+
+        "widgets": {
+                "slides": {
+                "title": "轮播图",
+                "display": "1",
+                "vars": {
+
+                    "features": {
+                        "title": "图片切换",
+                        "value": [
+                            {
+                                "image":""
+                            },
+                            {
+                                "image":""
+                            },
+                            {
+                                "image":""
+                            },
+                            {
+                                "image":""
+                            }
+                        ],
+                        "type": "array",
+                        "item": {
+
+                            "image": {
+                                "title": "图片",
+                                "value": "",
+                                "type": "image"
+                            }
+                        },
+                        "tip": ""
+
+                    }
+                }
+            },
+                "about": {
+                    "title": "关于我们",
+                    "display": "1",
+                    "vars": {
+                        "image": {
+                            "title": "图片",
+                            "value": "",
+                            "type": "image",
+                            "tip": "点击更改图片",
+                            "rule": {
+                                "require": true
+                            },
+                            "message":{
+                                "require":"不能为空"
+                            }
+                        },
+                        "sub_title": {
+                            "title": "段落1",
+                            "value": "关于理行",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title1": {
+                            "title": "段落2",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title2": {
+                            "title": "段落3",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title3": {
+                            "title": "段落4",
+                            "value": "关于智世",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title4": {
+                            "title": "段落5",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title5": {
+                            "title": "段落6",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        }
+                    }
+                },
+
+                "service1": {
+                    "title": "巴厘岛",
+                    "display": "1",
+                    "vars": {
+                        "image": {
+                            "title": "图片",
+                            "value": "",
+                            "type": "image",
+                            "tip": "点击更改图片",
+                            "rule": {
+                                "require": true
+                            },
+                            "message":{
+                                "require":"不能为空"
+                            }
+                        },
+                        "sub_title": {
+                            "title": "段落1",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title1": {
+                            "title": "段落2",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title2": {
+                            "title": "段落3",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        }
+                    }
+                },
+                "service2": {
+                    "title": "马尔代夫",
+                    "display": "1",
+                    "vars": {
+                        "image": {
+                            "title": "图片",
+                            "value": "",
+                            "type": "image",
+                            "tip": "点击更改图片",
+                            "rule": {
+                                "require": true
+                            },
+                            "message":{
+                                "require":"不能为空"
+                            }
+                        },
+                        "sub_title": {
+                            "title": "段落1",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title1": {
+                            "title": "段落2",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title2": {
+                            "title": "段落3",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        }
+                    }
+                },
+                "service3": {
+                    "title": "长城",
+                    "display": "1",
+                    "vars": {
+                        "image": {
+                            "title": "图片",
+                            "value": "",
+                            "type": "image",
+                            "tip": "点击更改图片",
+                            "rule": {
+                                "require": true
+                            },
+                            "message":{
+                                "require":"不能为空"
+                            }
+                        },
+                        "sub_title": {
+                            "title": "段落1",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title1": {
+                            "title": "段落2",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title2": {
+                            "title": "段落3",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        }
+                    }
+                },
+
+                "gallerys": {
+                    "title": "客户案例",
+                    "display": "1",
+                    "vars": {
+
+                        "features": {
+                            "title": "图片切换",
+                            "value": [
+                                {
+                                    "image":""
+                                },
+                                {
+                                    "image":""
+                                },
+                                {
+                                    "image":""
+                                },
+                                {
+                                    "image":""
+                                },
+                                {
+                                    "image":""
+                                },
+                                {
+                                    "image":""
+                                }
+
+
+                            ],
+                            "type": "array",
+                            "item": {
+
+                                "image": {
+                                    "title": "图片",
+                                    "value": "",
+                                    "type": "image"
+                                }
+
+
+                            },
+                            "tip": ""
+
+                        }
+                    }
+                },
+
+                "cooperation": {
+                    "title": "合作加盟",
+                    "display": "1",
+                    "vars": {
+
+                        "features": {
+                            "title": "图片切换",
+                            "value": [
+                                {
+                                    "image":"",
+                                    "title":"",
+                                    "content":""
+                                },
+                                {
+                                    "image":"",
+                                    "title":"",
+                                    "content":""
+                                },
+                                {
+                                    "image":"",
+                                    "title":"",
+                                    "content":""
+                                }
+                            ],
+                            "type": "array",
+                            "item": {
+
+                                "image": {
+                                    "title": "图片",
+                                    "value": "",
+                                    "type": "image"
+                                },
+                                "title": {
+                                    "title": "标题",
+                                    "value": "",
+                                    "type": "text"
+                                },
+                                "content": {
+                                    "title": "内容",
+                                    "value": "",
+                                    "type": "text"
+                                }
+
+
+                            },
+                            "tip": ""
+
+                        }
+                    }
+                },
+
+                "contact":{
+                    "title": "联系我们",
+                    "display": "1",
+                    "vars": {
+                        "sub_title": {
+                            "title": "地址",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title1": {
+                            "title": "电话",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                        "sub_title2": {
+                            "title": "邮箱",
+                            "value": "",
+                            "type": "text",
+                            "placeholder": "请输入副标题",
+                            "tip": "",
+                            "rule": {
+                                "require": true
+                            }
+                        }
+
+
+                    }
+                }
+        }
+    }
+}

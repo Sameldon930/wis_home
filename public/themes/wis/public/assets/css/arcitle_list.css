@@ -1,0 +1,119 @@
+
+body,.container,.container-full{
+    background: white;
+}
+.left-a-active{
+    color: white;
+}
+.left-nav-active{
+    background: black ;
+}
+.border-grey{
+    border: 1px solid #999999;
+}
+.a-left-nav{
+    /*background: white;*/
+    width: 60%;
+    height: 85px;
+    margin: 0 auto;
+    text-align: left;
+    padding-left:6%;
+    padding-top: 5%;
+}
+.top-nav {
+    /*background: rgb(245,245,245);*/
+    background: #f5f5f5 ;
+    line-height: 40px;
+    text-align: center;
+    height: 40px;
+
+}
+.color-black{
+    color: black;
+}
+.ma-t-b-5{
+    margin: 5% 0;
+}
+
+
+.font-size15{
+    font-size: 15px;
+}
+.ma-b-1{
+    margin-bottom: 1%;
+}
+
+.ma-r-2{
+    margin-right: 2%;
+}
+.right-content-title{
+    color: black;
+    font-size: 14px;
+    /*font-weight: bold;*/
+}
+
+.right-content{
+    background: white;
+    padding: 2%;
+}
+
+.right-content2{
+    padding: 2% 0;
+}
+
+.border-b-dashed{
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.right-content-title:hover{
+    color: red;
+}
+
+.right-pages{
+    margin-top: 2%;
+
+}
+.text-overflow{
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ma-b-5{
+    margin-bottom: 5%;
+}
+.font-size14{
+    font-size: 14px;
+}
+
+.overflow-heidden{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.left-time{
+    background: #f5f5f5;
+    color: black;
+    text-align: center;
+    /*height: 80px;*/
+    height: 8.333%;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    padding: 0;
+    padding-top: 2%;
+}
+
+.right-content3{
+    height: 80px;
+}
+
+.ma-b-1{
+    margin-bottom:1%
+}
+.left-time-day{
+    display: block;
+    font-size: 18px;
+}

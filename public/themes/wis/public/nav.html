@@ -1,0 +1,46 @@
+
+<div class="copyrights">版权所有 <a href="http://www.world-is-smart.com" >智世(厦门)网络科技有限公司</a></div>
+
+<!-- Navigation -->
+<div id="navigation" class="navbar navbar-fixed-top">
+    <div class="navbar-inner ">
+        <div class="container no-padding">
+
+            <a class="show-menu" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="show-menu-bar"></span>
+            </a>
+
+            <div id="logo"><a class="external" href="?c=index"></a></div>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="menu-1"><a class="colapse-menu1" href="/">首页</a></li>
+                    <li class="menu-2"><a class="colapse-menu1" href="#we-are-newave">关于</a></li>
+                    <li class="menu-3"><a class="colapse-menu1" href="#services">服务</a></li>
+                    <li class="menu-4"><a class="colapse-menu1" href="#clients">客户</a></li>
+                    <li class="menu-5"><a class="colapse-menu1" href="#portfolio">案例</a></li>
+                    <li class="menu-6"><a class="colapse-menu1" href="#contact-parallax">联系</a></li>
+                    <li class="dropdown menu-7"><a class="dropdown-toggle" data-toggle="dropdown" href="#">资讯</a>
+                        <ul class="dropdown-menu">
+
+                            <portal:categories_kui item="vo" order="id DESC" where="status 1">
+                                <li><a type="_blank" href="/{$vo.alias}">{$vo.name}</a></li>
+                            </portal:categories_kui>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown menu-8"><a class="dropdown-toggle"  data-toggle="dropdown" href="#">专题</a>
+                        <ul class="dropdown-menu">
+                            <li> <a class="external" type="_blank" href="">研发服务</a></li>
+                            <li> <a class="external" type="_blank" href="?c=index&amp;a=solve">解决方案</a></li>
+                            <li> <a class="external" type="_blank" href="">硬软服务</a></li>
+                            <li> <a class="external" type="_blank" href="">智孵化器</a></li>
+                            <li> <a type="_blank" href="/portal/wechat/index">微智小程序</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/Navigation -->
+

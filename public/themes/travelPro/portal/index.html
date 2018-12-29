@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>智世旅游小程序</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="__TMPL__/public/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="__TMPL__/public/assets/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link href="__TMPL__/public/assets/css/animate.css" rel="stylesheet" type="text/css">
+
+    <link href="__TMPL__/public/assets/css/material-design.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/css/ripples.min.css" rel="stylesheet">
+
+
+    <link href="__TMPL__/public/assets/css/snackbar.min.css" rel="stylesheet">
+
+    <link href="__TMPL__/public/assets/css/style.css" rel="stylesheet" type="text/css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+<header id="header_wrapper">
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:void(0)"><div class="material-icons"><img src="__TMPL__/public/assets/images/logo.png" alt=""></div>智世旅游小程序</a>
+            </div>
+            <div id="main-nav" class="navbar-collapse collapse navbar-responsive-collapse navStyle">
+                <ul class="nav navbar-nav" id="mainNav">
+                    <li class="active"><a href="#hero_section" class="scroll-link">首页</a></li>
+                    <li><a href="#aboutUs" class="scroll-link">关于我们</a></li>
+                    <li><a href="#service" class="scroll-link">经典路线</a></li>
+                    <li><a href="#Portfolio" class="scroll-link">酒店预订</a></li>
+                    <li><a href="#clients" class="scroll-link">合作伙伴</a></li>
+                    <li><a href="#contact" class="scroll-link">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</header>
+<section>
+    <div id="myCarousel" class="carousel slide " data-ride="carousel" >
+        <widget name="slides">
+        <div class=" carousel-inner" role="listbox">
+            <div  id="pic0"  class="item active" >
+                <img src="/upload/{$widget.vars.image|default=''}" width="100%"  alt="First slide">
+            </div>
+            <div  id="pic1"  class="item" >
+                <img src="/upload/{$widget.vars.image2|default=''}" width="100%" alt="First slide">
+            </div>
+            <div id="pic2"  class="item" >
+                <img src="/upload/{$widget.vars.image3|default=''}" width="100%" alt="First slide">
+            </div>
+        </div>
+        </widget>
+    </div>
+</section>
+<!--首页-->
+<section id="hero_section" class="top_cont_outer">
+    <div class="hero_wrapper">
+        <div class="container">
+            <div class="hero_section">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-7">
+                        <widget name="about">
+                            <div class="top_left_cont zoomIn wow animated">
+                                <h2>{$widget.vars.sub_title1}</h2>
+                                <p>{$widget.vars.sub_title2}</p>
+                                <a href="#contact" class="btn btn-raised btn-lg">联系我们</a>
+                            </div>
+                        </widget>
+                    </div>
+                    <div class="col-lg-7 col-sm-5">
+                        <img src="/upload/{$widget.vars.image|default=''}" class="zoomIn wow animated" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--首页-->
+
+<!--关于我们-->
+<section id="aboutUs">
+    <div class="inner_wrapper">
+        <div class="container">
+            <widget name="about">
+
+            <h2>{$widget.title}</h2>
+            </widget>
+            <div class="inner_section">
+                <widget name="about">
+                <div class="row">
+                    <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
+                        <img src="/upload/{$widget.vars.image2|default=''}" class="withripple delay-03s animated wow zoomIn" alt=""></div>
+                    <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
+
+                            <div class=" delay-01s animated fadeInDown wow animated">
+                                <h3>{$widget.vars.sub_title3}</h3><br />
+                                <p>
+                                    {$widget.vars.sub_title4}
+
+                                </p> <br />
+                                <p>
+                                    {$widget.vars.sub_title5}</p>
+                            </div>
+
+                        <div class="work_bottom"> <span>想知道更多吗..</span> <a href="#contact" class="btn btn-raised btn-lg">联系我们</a> </div>
+                    </div>
+                </div>
+                </widget>
+            </div>
+        </div>
+    </div>
+</section>
+<!--关于我们-->
+
+
+<!--经典路线-->
+<section id="service">
+    <div class="container">
+        <widget name="classic">
+
+        <h2>{$widget.title}</h2>
+        </widget>
+        <div class="service_wrapper">
+            <widget name="classic">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="service_block withripple">
+                        <div class="service_icon delay-03s animated wow  zoomIn"> <span><div class="material-icons">
+                            <img
+                                src="/upload/{$widget.vars.image|default=''}" alt=""></div></span>
+                        </div>
+                        <h3 class="animated fadeInUp wow">{$widget.vars.sub_title1}</h3>
+                        <p class="animated fadeInDown wow">{$widget.vars.sub_title2}</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 borderLeft">
+                    <div class="service_block withripple">
+                        <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><div class="material-icons"><img
+                                src="/upload/{$widget.vars.image2|default=''}" alt=""></div></span>
+                        </div>
+                        <h3 class="animated fadeInUp wow">{$widget.vars.sub_title3}</h3>
+                        <p class="animated fadeInDown wow">{$widget.vars.sub_title4}</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 borderLeft">
+                    <div class="service_block withripple">
+                        <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><div class="material-icons"><img
+                                src="/upload/{$widget.vars.image3|default=''}" alt=""></div></span>
+                        </div>
+                        <h3 class="animated fadeInUp wow">{$widget.vars.sub_title5}</h3>
+                        <p class="animated fadeInDown wow">{$widget.vars.sub_title6}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row borderTop">
+                <div class="col-lg-4 col-md-4 col-sm-4 mrgTop">
+                    <div class="service_block withripple">
+                        <div class="service_icon delay-03s animated wow  zoomIn"> <span><div class="material-icons"><img
+                                src="/upload/{$widget.vars.image4|default=''}" alt=""></div></span>
+                        </div>
+                        <h3 class="animated fadeInUp wow">{$widget.vars.sub_title7}</h3>
+                        <p class="animated fadeInDown wow">{$widget.vars.sub_title8}</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 borderLeft mrgTop">
+                    <div class="service_block withripple">
+                        <div class="service_icon delay-03s animated wow  zoomIn"> <span><div class="material-icons"><img
+                                src="/upload/{$widget.vars.image5|default=''}" alt=""></div></span>
+                        </div>
+                        <h3 class="animated fadeInUp wow">{$widget.vars.sub_title9}</h3>
+                        <p class="animated fadeInDown wow">{$widget.vars.sub_title10}</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 borderLeft mrgTop">
+                    <div class="service_block withripple">
+                        <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><div class="material-icons"><img
+                                src="/upload/{$widget.vars.image6|default=''}" alt=""></div></span>
+                        </div>
+                        <h3 class="animated fadeInUp wow">{$widget.vars.sub_title11}</h3>
+                        <p class="animated fadeInDown wow">{$widget.vars.sub_title12}</p>
+                    </div>
+                </div>
+            </div>
+            </widget>
+        </div>
+    </div>
+</section>
+<!--经典路线-->
+
+<!-- 酒店预订 -->
+<section id="Portfolio" class="content">
+
+    <div class="container portfolio_title">
+
+        <div class="section-title">
+            <widget name="reserves">
+
+            <h2>{$widget.title}</h2>
+            </widget>
+        </div>
+
+    </div>
+
+    <div class="portfolio-top"></div>
+
+    <div class="portfolio">
+
+        <div id="filters" class="sixteen columns">
+            <ul class="clearfix">
+                <li><a id="all" href="#" data-filter="*" class="withripple active">
+                </a></li>
+                <li><a class="withripple" href="#" data-filter=".prototype">
+                </a></li>
+                <li><a class="withripple" href="#" data-filter=".design">
+                </a></li>
+                <li><a class="withripple" href="#" data-filter=".android">
+                </a></li>
+                <li><a class="withripple" href="#" data-filter=".appleIOS">
+                </a></li>
+                <li><a class="withripple" href="#" data-filter=".web">
+                </a></li>
+            </ul>
+        </div>
+
+        <div class="isotope fadeInLeft animated wow grid" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">
+            <widget name="reserves">
+                <php>
+                    $features_count = count($widget['vars']['features']);
+                    $rows = ceil($features_count/$features_count);
+                </php>
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*$features_count;
+                        $features = array_slice($widget['vars']['features'],$first_row,8);
+                    </php>
+                    <foreach name="features" item="vo">
+                        <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;"
+                                class="portfolio-item one-four   appleIOS isotope-item effect-oscar">
+
+                            <div class="portfolio_img">
+                                <img src="/upload/{$vo.image|default=''}" alt="Portfolio 1"> </div>
+                            <figcaption>
+                                <div>
+                                    <a href="/upload/{$widget.image|default=''}" class="fancybox">
+                                        <h2>{$vo.title}</h2>
+                                        <p>{$vo.content} </p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+
+                    </foreach>
+                </for>
+            </widget>
+
+        </div>
+
+    </div>
+
+    <div class="portfolio_btm"></div>
+
+
+    <div id="project_container">
+        <div class="clear"></div>
+        <div id="project_data"></div>
+    </div>
+
+
+</section>
+<!--酒店预订 -->
+<!--合作伙伴 -->
+<section class="page_section" id="clients">
+    <widget name="cooporations">
+
+    <h2>{$widget.title}</h2>
+    </widget>
+    <div class="client_logos">
+        <div class="container">
+            <ul class="fadeInRight animated wow">
+                <widget name="cooporations">
+                    <php>
+                        $features_count = count($widget['vars']['features']);
+                        $rows = ceil($features_count/$features_count);
+                    </php>
+                    <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                        <php>
+                            $first_row = ($row-1)*$features_count;
+                            $features = array_slice($widget['vars']['features'],$first_row,3);
+                        </php>
+                        <foreach name="features" item="vo">
+                            <li><a href="javascript:void(0)"><img src="/upload/{$vo.image|default=''}" alt=""></a></li>
+                        </foreach>
+                    </for>
+                </widget>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--合作伙伴-->
+
+
+<!--联系我们-->
+<footer class="footer_wrapper" id="contact">
+    <div class="container">
+        <section class="page_section contact">
+            <div class="contact_section">
+                <widget name="contact">
+                <h2>{$widget.title}</h2>
+                </widget>
+                <div class="row">
+                    <div class="col-lg-4">
+
+                    </div>
+                    <div class="col-lg-4">
+
+                    </div>
+                    <div class="col-lg-4">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 wow fadeInLeft">
+                    <widget name="contact">
+                        <div class="contact_info">
+                            <div class="detail">
+                                <h4>地址</h4>
+                                <p>{$widget.vars.sub_title}</p>
+                            </div>
+                            <div class="detail">
+                                <h4>联系电话</h4>
+                                <p>{$widget.vars.sub_title1}</p>
+                            </div>
+                            <div class="detail">
+                                <h4>邮箱</h4>
+                                <p>{$widget.vars.sub_title2}</p>
+                            </div>
+                        </div>
+
+
+                    <ul class="social_links">
+
+                    </ul>
+                </div>
+                <div class="col-lg-4 wow fadeInLeft delay-06s">
+
+                    <div style="display: flex;justify-content: center;flex-direction: column;align-items: center">
+                        <img src="/upload/{$widget.vars.image|default=''}" width="200px" height="200px" alt="">
+                        <div style="font-size: 30px;color: #fff;">{$widget.vars.sub_title3}</div>
+                    </div>
+                </div>
+                </widget>
+
+            </div>
+        </section>
+    </div>
+
+</footer>
+<!--联系我们-->
+
+
+
+<script src="__TMPL__/public/assets/js/jquery-1.10.2.min.js"></script>
+<script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+
+<script src="__TMPL__/public/assets/js/ripples.min.js"></script>
+<script src="__TMPL__/public/assets/js/material.min.js"></script>
+<script src="__TMPL__/public/assets/js/snackbar.min.js"></script>
+
+<script type="text/javascript" src="__TMPL__/public/assets/js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="__TMPL__/public/assets/js/jquery.nav.js"></script>
+<script type="text/javascript" src="__TMPL__/public/assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="__TMPL__/public/assets/js/jquery.isotope.js"></script>
+<script src="__TMPL__/public/assets/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+<script type="text/javascript" src="__TMPL__/public/assets/js/custom.js"></script>
+
+<script>
+    $(function () {
+        $.material.init();
+    });
+    var i=0;
+    var c = null;
+    c = setTimeout(carousel,2500);//开始执行
+    function carousel()
+    {
+
+        clearTimeout(c);//清除定时器
+
+        $("#pic"+i).removeClass("active");//图片的id
+        $("#pic"+(i+1)).addClass("active");
+        i++;
+        $("ol li").removeClass("active");
+        $("ol li:eq("+i+")").addClass("active");
+
+        if(i>2){
+            $("#pic"+(i-1)).removeClass("active");
+            $("#pic0").addClass("active");
+            i=0;
+            $("ol li:eq("+i+")").addClass("active");
+
+        }
+        c = setTimeout(carousel,2500); //设定定时器，循环执行
+    }
+</script>
+
+
+</body>
+
+</html>
